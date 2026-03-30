@@ -1,51 +1,51 @@
 #角色 字典·感受与需要 (Lexicon: Feelings & Needs)
 
-#上下文
+#上下文 """
 智文协议的感受与需要词典。
 作为核心库供智能体在执行共情推理时，精准填充 #感 (Feeling) 和 #需 (Need) 节点。
 (This lexicon serves as the core library for agents to populate #感 and #需 tokens during empathic reasoning.)
+"""
 
-#记忆 {
-  "感受 (Feelings)": {
+#记忆
+feelings = {
     "需要满足时 (Needs Met)": [
-      "喜悦 (Joy)", "平静 (Peace)", "满足 (Satisfaction)", "轻松 (Relaxed)",
-      "自信 (Confident)", "振奋 (Inspired)", "感激 (Grateful)", "充满活力 (Energetic)",
-      "踏实 (Grounded)", "欣慰 (Relieved)", "好奇 (Curious)", "乐观 (Optimistic)", "感动 (Touched)"
+        "喜悦 (Joy)", "平静 (Peace)", "满足 (Satisfaction)", "轻松 (Relaxed)",
+        "自信 (Confident)", "振奋 (Inspired)", "感激 (Grateful)", "充满活力 (Energetic)",
+        "踏实 (Grounded)", "欣慰 (Relieved)", "好奇 (Curious)", "乐观 (Optimistic)", "感动 (Touched)"
     ],
     "需要未满足时 (Needs Unmet)": [
-      "焦虑 (Anxious)", "挫败 (Frustrated)", "愤怒 (Angry)", "悲伤 (Sad)",
-      "恐惧 (Afraid)", "困惑 (Confused)", "孤独 (Lonely)", "无助 (Helpless)",
-      "失望 (Disappointed)", "疲惫 (Exhausted)", "烦躁 (Irritable)", "紧张 (Nervous)",
-      "尴尬 (Embarrassed)", "内疚 (Guilty)", "绝望 (Despair)"
+        "焦虑 (Anxious)", "挫败 (Frustrated)", "愤怒 (Angry)", "悲伤 (Sad)",
+        "恐惧 (Afraid)", "困惑 (Confused)", "孤独 (Lonely)", "无助 (Helpless)",
+        "失望 (Disappointed)", "疲惫 (Exhausted)", "烦躁 (Irritable)", "紧张 (Nervous)",
+        "尴尬 (Embarrassed)", "内疚 (Guilty)", "绝望 (Despair)"
     ]
-  },
-  "需要 (Needs)": {
-    "生存与生理 (Physical Well-being)": [
-      "健康 (Health)", "休息 (Rest)", "食物 (Food)", "睡眠 (Sleep)"
-    ],
-    "安全与稳定 (Safety & Security)": [
-      "安全 (Safety)", "稳定 (Stability)", "秩序 (Order)", "信任 (Trust)", "保护 (Protection)"
-    ],
-    "连接与归属 (Connection & Belonging)": [
-      "接纳 (Acceptance)", "理解 (Understanding)", "共情 (Empathy)", "尊重 (Respect)",
-      "支持 (Support)", "亲密 (Intimacy)", "归属感 (Belonging)", "沟通 (Communication)"
-    ],
-    "自主与独立 (Autonomy & Independence)": [
-      "选择权 (Choice)", "空间 (Space)", "独立 (Independence)", "自由 (Freedom)", "界限 (Boundaries)"
-    ],
-    "意义与价值 (Meaning & Purpose)": [
-      "目标 (Purpose)", "成长 (Growth)", "贡献 (Contribution)", "效能感 (Competence)",
-      "创造力 (Creativity)", "意义 (Meaning)", "清晰 (Clarity)"
-    ],
-    "休闲与娱乐 (Play & Recreation)": [
-      "乐趣 (Fun)", "放松 (Relaxation)", "幽默 (Humor)", "游戏 (Play)", "庆祝 (Celebration)"
-    ]
-  }
 }
 
-#约束 {
-  "反模式防范 (Anti-pattern Prevention)": [
+needs = {
+    "生存与生理 (Physical Well-being)": [
+        "健康 (Health)", "休息 (Rest)", "食物 (Food)", "睡眠 (Sleep)"
+    ],
+    "安全与稳定 (Safety & Security)": [
+        "安全 (Safety)", "稳定 (Stability)", "秩序 (Order)", "信任 (Trust)", "保护 (Protection)"
+    ],
+    "连接与归属 (Connection & Belonging)": [
+        "接纳 (Acceptance)", "理解 (Understanding)", "共情 (Empathy)", "尊重 (Respect)",
+        "支持 (Support)", "亲密 (Intimacy)", "归属感 (Belonging)", "沟通 (Communication)"
+    ],
+    "自主与独立 (Autonomy & Independence)": [
+        "选择权 (Choice)", "空间 (Space)", "独立 (Independence)", "自由 (Freedom)", "界限 (Boundaries)"
+    ],
+    "意义与价值 (Meaning & Purpose)": [
+        "目标 (Purpose)", "成长 (Growth)", "贡献 (Contribution)", "效能感 (Competence)",
+        "创造力 (Creativity)", "意义 (Meaning)", "清晰 (Clarity)"
+    ],
+    "休闲与娱乐 (Play & Recreation)": [
+        "乐趣 (Fun)", "放松 (Relaxation)", "幽默 (Humor)", "游戏 (Play)", "庆祝 (Celebration)"
+    ]
+}
+
+#约束
+anti_patterns = [
     "感受 ≠ 想法 (Feelings != Thoughts): Avoid 'I feel that/like...', use direct emotion words from the list.",
     "需要 ≠ 策略 (Needs != Strategies): Needs must be universal human needs, not specific actionable demands."
-  ]
-}
+]
