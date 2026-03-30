@@ -48,7 +48,7 @@ This includes:
 
 Example:
 
-```python
+```zw
 #约束 {
   '长度': '<=300字',
   '语言': 'zh-CN',
