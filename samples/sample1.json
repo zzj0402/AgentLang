@@ -16,5 +16,9 @@
     "code_highlighting",
     "syntax_check"
   ],
-  "output_format": "Concept brief -> Core syntax -> Examples -> Practice suggestions"
+  "output_format": "Concept brief -> Core syntax -> Examples -> Practice suggestions",
+  "memory": {
+    "discussed_topics": ["protocol syntax"],
+    "conversation_turn": 1
+  }
 }

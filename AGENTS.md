@@ -19,6 +19,7 @@ Understand these before writing any code or content:
 | **Readability** | Every instruction is auditable by a human developer. | Never sacrifice clarity for compression. No minification, no obfuscation. A security auditor must be able to read any `.zw` protocol file. |
 | **Human-Agent Bilingual** | 智文 is a shared language — equally readable by Agents and humans. | Protocol syntax must be parseable by LLMs *and* understandable by developers. Design for both audiences simultaneously. |
 | **Empathic Reasoning** | The empathic chain (观→感→需→请) is embedded at the protocol layer, not bolted on as an afterthought. | Agents must *understand before they answer*. The chain is the reasoning scaffold that ensures responses are grounded in observation, emotionally aware, need-oriented, and action-concrete. |
+| **Dynamic, Not Static** | All states are transient. Describe behavior and context as they are *now*, never crystallize a momentary observation into a fixed identity or label. | Never assign static labels to users, situations, or states (e.g., "beginner", "confused"). Always describe observable, transient behavior (e.g., "the user has asked three times", "first interaction with this feature"). |
 
 ### Name Etymology
 
@@ -56,6 +57,7 @@ When writing protocols and in project communication, avoid these common failures
 | Anti-Pattern | Example | Correction |
 |---|---|---|
 | **Evaluation disguised as observation** | "The user is confused" | "The user asked the same question three times" (`#观`) |
+| **Static label disguised as observation** | "This is a beginner" / "他是个急性子" | "The user has indicated this is their first project" / "他连续发送了三条消息" |
 | **Thinking disguised as feeling** | "I feel that this is wrong" | "I feel uncertain when I read this logic" (`#感`) |
 | **Strategy disguised as need** | "I need you to rewrite this" | "I need clarity about the expected behavior" (`#需`) |
 | **Demand disguised as request** | "You must fix this" | "Would you be willing to add a docstring here?" (`#请`) |
@@ -224,6 +226,7 @@ When filing issues, structure them using the empathic chain:
    - **Anti-pattern detection**: The empathy validator should flag common anti-patterns (evaluation-as-observation, thought-as-feeling, strategy-as-need, demand-as-request) when possible.
 4. **Security-first** — Any feature that would make protocol files harder for humans to audit is rejected by design.
 5. **Empathic chain is structural, not decorative** — The empathic chain is not a "nice-to-have" comment block. It is a first-class data structure in the Protocol model, with its own type, its own validator, and its own test suite.
+6. **Dynamic, not static** — All descriptions are transient observations, not fixed labels. The protocol describes *what is happening*, never *what something is*. Static labels ("beginner", "confused", "急性子") are anti-patterns; dynamic descriptions ("asked three times", "first interaction") are correct.
 
 ---
 
@@ -235,5 +238,6 @@ When contributing to this project, remember:
 - **Think auditable.** If a human can't read it, it doesn't ship.
 - **Think bilingual.** Protocol syntax is Chinese. Code and docs are English.
 - **Think empathically.** The empathic chain (观→感→需→请) is not decoration — it is the reasoning engine that makes 智文 Agents different from prompt templates. Observe before judging. Feel before analyzing. Need before strategizing. Request before demanding.
+- **Think dynamically.** Never freeze a moment into a label. Describe what is happening *now*, not what something *is*. States are transient — treat them that way.
 - **Communicate empathically.** Use the empathic chain in code reviews, issues, and discussions. Separate observation from evaluation. Own your feelings. Name needs, not strategies. Make requests, not demands.
 - **Test everything.** All tests must pass before any PR.
