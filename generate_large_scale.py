@@ -64,62 +64,92 @@ DATA = {
     ]
 }
 
-def generate_massive_pair(index, out_dir):
-    """Generates a massive .zw and .json file pair to simulate extreme architectural complexity."""
-
-    # 1. Base components
+def generate_interagent_pair(index, out_dir):
+    """Generates a dataset simulating massive inter-agent communication."""
     r_idx = random.randint(0, len(DATA["roles"])-1)
 
-    # Generate 50 context paragraphs
+    # 100 turns of multi-agent communication history
+    agents = ["研究员", "审查员", "代码专家", "协调员"]
+    agents_en = ["Researcher", "Reviewer", "CodeExpert", "Orchestrator"]
+
+    chat_history_zw = []
+    chat_history_json = []
+
+    for i in range(100):
+        a_idx = random.randint(0, len(agents)-1)
+        msg_zw = f"模块{i}的数据已经处理完毕，当前状态为等待审核。"
+
+        # Zhiwen compresses this densely without brackets and objects
+        chat_history_zw.append(f"{agents[a_idx]}: {msg_zw}")
+
+        # JSON requires an array of objects
+        chat_history_json.append({
+            "sender": agents_en[a_idx],
+            "message": msg_zw # using same content to isolate structure
+        })
+
+    f_idx = random.randint(0, len(DATA["feelings"])-1)
+    n_idx = random.randint(0, len(DATA["needs"])-1)
+    req_idx = random.randint(0, len(DATA["requests"])-1)
+    out_idx = random.randint(0, len(DATA["outputs"])-1)
+
+    zw_content = f"""#角色 {DATA['roles'][r_idx]['zw']}
+
+#上下文
+{"".join([f"  {c}\n" for c in chat_history_zw])}
+
+#观 多智能体连续通讯100轮，已达成一致
+#感 {DATA['feelings'][f_idx]['zw']}
+#需 {DATA['needs'][n_idx]['zw']}
+#请 {DATA['requests'][req_idx]['zw']}
+
+#输出 {DATA['outputs'][out_idx][0]}
+"""
+
+    json_obj = {
+        "role": DATA["roles"][r_idx]["zw"], # keep zw for structural comparison
+        "context": chat_history_json,
+        "empathic_chain": {
+            "observation": "多智能体连续通讯100轮，已达成一致",
+            "feeling": DATA["feelings"][f_idx]["zw"],
+            "need": DATA["needs"][n_idx]["zw"],
+            "request": DATA["requests"][req_idx]["zw"]
+        },
+        "output_format": DATA["outputs"][out_idx][0]
+    }
+
+    json_content = json.dumps(json_obj, indent=2, ensure_ascii=False)
+
+    base_name = f"interagent_{index:04d}"
+    with open(out_dir / f"{base_name}.zw", "w", encoding="utf-8") as f:
+        f.write(zw_content)
+    with open(out_dir / f"{base_name}.json", "w", encoding="utf-8") as f:
+        f.write(json_content)
+
+
+def generate_massive_pair(index, out_dir):
+    """Generates a massive .zw and .json file pair to simulate extreme architectural complexity."""
+    r_idx = random.randint(0, len(DATA["roles"])-1)
     contexts_zw = [DATA["contexts"][random.randint(0, len(DATA["contexts"])-1)]["zw"] for _ in range(50)]
-    contexts_en = [DATA["contexts"][random.randint(0, len(DATA["contexts"])-1)]["en"] for _ in range(50)]
-
-    # 5 observations
     obs_zw = "；".join([DATA["observations"][random.randint(0, len(DATA["observations"])-1)]["zw"] for _ in range(5)])
-    obs_en = "; ".join([DATA["observations"][random.randint(0, len(DATA["observations"])-1)]["en"] for _ in range(5)])
-
-    # 1 feeling, need, request
     f_idx = random.randint(0, len(DATA["feelings"])-1)
     n_idx = random.randint(0, len(DATA["needs"])-1)
     req_idx = random.randint(0, len(DATA["requests"])-1)
 
-    # 100 Constraints
     constraints_zw = ""
-    constraints_json = {}
     for i in range(100):
-        key_zw = f"规则{i}"
-        key_en = f"rule_{i}"
-        val_zw = f"必须遵循第{i}项企业标准，且严禁违规操作。"
-        val_en = f"Must follow enterprise standard number {i}, and violating operations are strictly prohibited."
-        constraints_zw += f"  {key_zw}: {val_zw}\n"
-        constraints_json[key_en] = val_en
+        constraints_zw += f"  规则{i}: 必须遵循第{i}项企业标准，且严禁违规操作。\n"
 
-    # 50 Tools with descriptions
     tools_zw = ""
-    tools_json = {}
     for i in range(50):
-        t_name_zw = f"工具{i}"
-        t_name_en = f"tool_{i}"
-        t_desc_zw = f"用于处理模块{i}的数据并返回分析结果。"
-        t_desc_en = f"Used to process data from module {i} and return analysis results."
-        tools_zw += f"  {t_name_zw}: {t_desc_zw}\n"
-        tools_json[t_name_en] = t_desc_en
+        tools_zw += f"  工具{i}: 用于处理模块{i}的数据并返回分析结果。\n"
 
-    # 1 Output
     out_idx = random.randint(0, len(DATA["outputs"])-1)
 
-    # 50 Memory items
     memory_zw = ""
-    memory_json = {}
     for i in range(50):
-        m_key_zw = f"会话历史{i}"
-        m_key_en = f"session_history_{i}"
-        m_val_zw = f"用户在时间戳{i}000提及了问题点。"
-        m_val_en = f"The user mentioned the pain point at timestamp {i}000."
-        memory_zw += f"  {m_key_zw}: {m_val_zw}\n"
-        memory_json[m_key_en] = m_val_en
+        memory_zw += f"  会话历史{i}: 用户在时间戳{i}000提及了问题点。\n"
 
-    # Build .zw content
     zw_content = f"""#角色 {DATA['roles'][r_idx]['zw']}
 
 #上下文
@@ -142,7 +172,6 @@ def generate_massive_pair(index, out_dir):
 {memory_zw}}}
 """
 
-    # Build .json content (Using Chinese Content to isolate Structural vs Semantic token density)
     json_obj = {
         "role": DATA["roles"][r_idx]["zw"],
         "context": contexts_zw,
@@ -159,15 +188,10 @@ def generate_massive_pair(index, out_dir):
     }
     json_content = json.dumps(json_obj, indent=2, ensure_ascii=False)
 
-    # Write files
     base_name = f"massive_{index:04d}"
-    zw_path = out_dir / f"{base_name}.zw"
-    json_path = out_dir / f"{base_name}.json"
-
-    with open(zw_path, "w", encoding="utf-8") as f:
+    with open(out_dir / f"{base_name}.zw", "w", encoding="utf-8") as f:
         f.write(zw_content)
-
-    with open(json_path, "w", encoding="utf-8") as f:
+    with open(out_dir / f"{base_name}.json", "w", encoding="utf-8") as f:
         f.write(json_content)
 
 
@@ -257,14 +281,17 @@ def main():
     parser.add_argument("count", type=int, help="Number of file pairs to generate")
     parser.add_argument("--out", default="large_samples", help="Output directory")
     parser.add_argument("--massive", action="store_true", help="Generate massive architectural complexity samples")
+    parser.add_argument("--interagent", action="store_true", help="Generate massive inter-agent communication samples")
     args = parser.parse_args()
 
     out_dir = Path(args.out)
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    print(f"Generating {args.count} file pairs in '{args.out}/' (Massive: {args.massive})...")
+    print(f"Generating {args.count} file pairs in '{args.out}/' (Massive: {args.massive}, Inter-agent: {args.interagent})...")
     for i in range(args.count):
-        if args.massive:
+        if args.interagent:
+            generate_interagent_pair(i, out_dir)
+        elif args.massive:
             generate_massive_pair(i, out_dir)
         else:
             generate_pair(i, out_dir)

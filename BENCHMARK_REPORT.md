@@ -86,6 +86,18 @@ Crucially, to isolate *structural bloat* from *linguistic bias*, the JSON equiva
 
 **Insight**: When linguistic bias is removed, **the structural boilerplate of standard JSON alone accounts for a significant token overhead**. By using the `.zw` syntax (which strips away braces, brackets, quotes, and heavy indentation in favor of concise markdown/yaml-like directives), the protocol achieves a pure structural token reduction of over 7%. The 50%-80% total reduction claim therefore manifests most strongly when Agents reach massive architectural complexity and are evaluated on natively bilingual or Chinese-optimized tokenizers (like Qwen or DeepSeek).
 
+### Token Cruncher Results: Massive Inter-Agent Communication (100 Pairs)
+
+To validate the efficiency of the `.zw` protocol in highly conversational multi-agent orchestrations, an experiment was conducted simulating **100 turns of continuous back-and-forth communication** between four distinct agent personas (Researcher, CodeExpert, Reviewer, Orchestrator).
+
+Like the structural test, the identical underlying Chinese conversation strings were fed to both the `.zw` Markdown format and the standard JSON array-of-objects format (`[{"sender": "agent", "message": "..."}]`) to isolate the structural overhead.
+
+*   **Overall Tokens (ZhiWen)**: 289,728
+*   **Overall Tokens (Equivalent JSON)**: 399,946
+*   **Overall Reduction**: **27.56%**
+
+**Insight**: The `JSON` syntax for logging conversation history is exceptionally heavy (repeated keys, strings, braces, and arrays). The 智文 protocol simply prepends the agent's name to the message block. By switching to the dense `.zw` format for massive inter-agent communication, developers immediately recover over **27% of their context window**.
+
 ### Embedding Similarity Results
 
 The embedding benchmark was run across the dataset (a subset of 100 was used for the Universal Sentence Encoder due to execution time constraints).
