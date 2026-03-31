@@ -1,28 +1,25 @@
 {
-  "role": "Customer Service - After-sales",
-  "context": "The user has submitted a C++ pull request containing multiple potential memory leaks.",
+  "role": "导师·心理咨询",
+  "context": "用户因项目延期感到极大压力，寻求排解",
   "empathic_chain": {
-    "observation": "The code logic contains a circular dependency and does not include any unit tests.",
-    "feeling": "I feel their confidence in the code quality and expectation for the review results.",
-    "need": "The user needs targeted correction guidance and encouragement to maintain learning motivation.",
-    "request": "Directly point out the risky lines of code and provide refactoring suggestions that include best practices."
+    "observation": "用户连续三次询问同一基础语法问题",
+    "feeling": "见其努力尝试表达但受挫的无力感",
+    "need": "用户需：高效、明确的解决方案与补偿安抚",
+    "request": "提供三个相关的高级词汇替换选项，并邀请用户造句练习"
   },
   "constraints": {
-    "length": "unlimited",
-    "language": "en-US",
-    "tone": "professional, objective",
-    "forbidden": "sarcasm or preaching"
+    "length": "<= 300 words",
+    "language": "zh-CN",
+    "style": "gentle, encouraging"
   },
   "tools": [
-    "code_highlighting",
-    "syntax_check"
+    "emotion_analyzer",
+    "historical_ticket_query",
+    "knowledge_base_retrieval"
   ],
-  "output_format": "Empathic response -> Issue breakdown -> Action plan",
+  "output_format": "共情回应→问题梳理→行动方案",
   "memory": {
-    "discussed_topics": [
-      "protocol syntax",
-      "basic directives"
-    ],
-    "conversation_turn": 3
+    "ticket_status": "escalated",
+    "vip_level": "gold"
   }
 }

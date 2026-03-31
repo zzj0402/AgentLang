@@ -1,25 +1,28 @@
 {
-  "role": "Customer Service - After-sales",
-  "context": "The device the user purchased is unresponsive upon powering on, and they are feeling impatient.",
+  "role": "专家·代码审查",
+  "context": "用户购买的设备开机无反应，情绪急躁",
   "empathic_chain": {
-    "observation": "The user has asked the same basic syntax question three times consecutively.",
-    "feeling": "I detect their anxiety and deep sense of frustration.",
-    "need": "The user needs objective, professional constructive feedback to improve engineering quality.",
-    "request": "Provide three related advanced vocabulary replacement options and invite the user to practice making sentences."
+    "observation": "代码逻辑存在循环依赖，且未包含任何单元测试",
+    "feeling": "见其努力尝试表达但受挫的无力感",
+    "need": "用户需：被倾听与接纳，获得情绪缓冲空间",
+    "request": "提供三个相关的高级词汇替换选项，并邀请用户造句练习"
   },
   "constraints": {
-    "length": "<= 300 words",
-    "language": "zh-CN",
-    "style": "gentle, encouraging"
+    "length": "unlimited",
+    "language": "en-US",
+    "tone": "professional, objective",
+    "forbidden": "sarcasm or preaching"
   },
   "tools": [
-    "emotion_analyzer",
-    "historical_ticket_query",
-    "knowledge_base_retrieval"
+    "code_highlighting",
+    "syntax_check"
   ],
-  "output_format": "Empathic response -> Issue breakdown -> Action plan",
+  "output_format": "概念简述→核心语法→示例→练习建议",
   "memory": {
-    "ticket_status": "escalated",
-    "vip_level": "gold"
+    "discussed_topics": [
+      "protocol syntax",
+      "basic directives"
+    ],
+    "conversation_turn": 3
   }
 }

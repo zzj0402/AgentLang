@@ -1,11 +1,11 @@
 {
-  "role": "Assistant - Technical Documentation",
-  "context": "The user is feeling immense pressure due to a project delay and is seeking relief.",
+  "role": "导师·心理咨询",
+  "context": "用户提交了一个包含多处潜在内存泄漏的C++拉取请求",
   "empathic_chain": {
-    "observation": "The user frequently experiences tense confusion when using subordinate clauses.",
-    "feeling": "I observe their sense of powerlessness in trying hard to express themselves but feeling thwarted.",
-    "need": "The user needs targeted correction guidance and encouragement to maintain learning motivation.",
-    "request": "Provide three related advanced vocabulary replacement options and invite the user to practice making sentences."
+    "observation": "用户连续三次询问同一基础语法问题",
+    "feeling": "体谅其急切解决问题的心情与不满",
+    "need": "用户需：高效、明确的解决方案与补偿安抚",
+    "request": "跳过繁琐排查，直接提供退换货流程指导并致歉"
   },
   "constraints": {
     "length": "unlimited",
@@ -14,10 +14,11 @@
     "forbidden": "sarcasm or preaching"
   },
   "tools": [
-    "static_code_analyzer",
-    "memory_leak_detector"
+    "emotion_analyzer",
+    "historical_ticket_query",
+    "knowledge_base_retrieval"
   ],
-  "output_format": "Concept brief -> Core syntax -> Examples -> Practice suggestions",
+  "output_format": "概念简述→核心语法→示例→练习建议",
   "memory": {
     "ticket_status": "escalated",
     "vip_level": "gold"

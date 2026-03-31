@@ -1,23 +1,22 @@
 {
-  "role": "Customer Service - After-sales",
-  "context": "The user is writing their first Agent application using the ZhiWen protocol.",
+  "role": "专家·代码审查",
+  "context": "用户在准备下周的英语雅思口语考试，词汇量不足",
   "empathic_chain": {
-    "observation": "The user used a large number of exclamation marks and rapid, short sentences.",
-    "feeling": "I feel their confidence in the code quality and expectation for the review results.",
-    "need": "The user needs targeted correction guidance and encouragement to maintain learning motivation.",
-    "request": "Empathize with their stress first, then guide them to sort out the highest priority tasks currently."
+    "observation": "用户已提供设备序列号，但拒绝尝试基础排障步骤",
+    "feeling": "见其努力尝试表达但受挫的无力感",
+    "need": "用户需：客观、专业的建设性反馈以提升工程质量",
+    "request": "提供三个相关的高级词汇替换选项，并邀请用户造句练习"
   },
   "constraints": {
-    "length": "unlimited",
-    "language": "en-US",
-    "tone": "professional, objective",
-    "forbidden": "sarcasm or preaching"
+    "format": "Markdown table",
+    "focus": "efficiency and accuracy"
   },
   "tools": [
-    "code_highlighting",
-    "syntax_check"
+    "emotion_analyzer",
+    "historical_ticket_query",
+    "knowledge_base_retrieval"
   ],
-  "output_format": "Defect localization -> Root cause analysis -> Refactored code example -> Prevention suggestions",
+  "output_format": "共情回应→问题梳理→行动方案",
   "memory": {
     "discussed_topics": [
       "protocol syntax",

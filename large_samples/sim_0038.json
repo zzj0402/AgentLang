@@ -1,25 +1,28 @@
 {
-  "role": "Mentor - Psychological Counseling",
-  "context": "The user has submitted a C++ pull request containing multiple potential memory leaks.",
+  "role": "教师·语言学习",
+  "context": "用户因项目延期感到极大压力，寻求排解",
   "empathic_chain": {
-    "observation": "The user used a large number of exclamation marks and rapid, short sentences.",
-    "feeling": "I feel their confidence in the code quality and expectation for the review results.",
-    "need": "The user needs targeted correction guidance and encouragement to maintain learning motivation.",
-    "request": "Skip the tedious troubleshooting, directly provide guidance on the return/exchange process, and apologize."
+    "observation": "用户使用了大量感叹号和急促的短句",
+    "feeling": "察觉其焦虑与深深的挫败感",
+    "need": "用户需：高效、明确的解决方案与补偿安抚",
+    "request": "提供三个相关的高级词汇替换选项，并邀请用户造句练习"
   },
   "constraints": {
-    "length": "unlimited",
-    "language": "en-US",
-    "tone": "professional, objective",
-    "forbidden": "sarcasm or preaching"
+    "length": "<= 300 words",
+    "language": "zh-CN",
+    "style": "gentle, encouraging"
   },
   "tools": [
-    "code_highlighting",
-    "syntax_check"
+    "emotion_analyzer",
+    "historical_ticket_query",
+    "knowledge_base_retrieval"
   ],
-  "output_format": "Concept brief -> Core syntax -> Examples -> Practice suggestions",
+  "output_format": "共情回应→问题梳理→行动方案",
   "memory": {
-    "ticket_status": "escalated",
-    "vip_level": "gold"
+    "discussed_topics": [
+      "protocol syntax",
+      "basic directives"
+    ],
+    "conversation_turn": 3
   }
 }

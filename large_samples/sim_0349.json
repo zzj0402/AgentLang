@@ -1,24 +1,25 @@
 {
-  "role": "Expert - Code Review",
-  "context": "The user is feeling immense pressure due to a project delay and is seeking relief.",
+  "role": "客服·售后服务",
+  "context": "用户提交了一个包含多处潜在内存泄漏的C++拉取请求",
   "empathic_chain": {
-    "observation": "The user frequently experiences tense confusion when using subordinate clauses.",
-    "feeling": "I observe their sense of powerlessness in trying hard to express themselves but feeling thwarted.",
-    "need": "The user needs targeted correction guidance and encouragement to maintain learning motivation.",
-    "request": "Empathize with their stress first, then guide them to sort out the highest priority tasks currently."
+    "observation": "用户使用了大量感叹号和急促的短句",
+    "feeling": "感其对代码质量的自信与对审查结果的期待",
+    "need": "用户需：高效、明确的解决方案与补偿安抚",
+    "request": "以简明示例为主，逐步拆解，避免术语堆砌"
   },
   "constraints": {
-    "format": "Markdown table",
-    "focus": "efficiency and accuracy"
+    "length": "<= 300 words",
+    "language": "zh-CN",
+    "style": "gentle, encouraging"
   },
   "tools": [
     "emotion_analyzer",
     "historical_ticket_query",
     "knowledge_base_retrieval"
   ],
-  "output_format": "Empathic response -> Issue breakdown -> Action plan",
+  "output_format": "缺陷定位→原因分析→重构代码示例→防范建议",
   "memory": {
-    "ticket_status": "escalated",
-    "vip_level": "gold"
+    "user_preference": "prefers direct code",
+    "historical_error_rate": "high"
   }
 }

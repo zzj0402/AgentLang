@@ -1,24 +1,26 @@
 {
-  "role": "Expert - Code Review",
-  "context": "The user has submitted a C++ pull request containing multiple potential memory leaks.",
+  "role": "客服·售后服务",
+  "context": "用户因项目延期感到极大压力，寻求排解",
   "empathic_chain": {
-    "observation": "The code logic contains a circular dependency and does not include any unit tests.",
-    "feeling": "I observe their sense of powerlessness in trying hard to express themselves but feeling thwarted.",
-    "need": "The user needs to quickly understand core concepts and build technical confidence.",
-    "request": "Empathize with their stress first, then guide them to sort out the highest priority tasks currently."
+    "observation": "用户连续三次询问同一基础语法问题",
+    "feeling": "感其对代码质量的自信与对审查结果的期待",
+    "need": "用户需：高效、明确的解决方案与补偿安抚",
+    "request": "以简明示例为主，逐步拆解，避免术语堆砌"
   },
   "constraints": {
-    "length": "<= 300 words",
-    "language": "zh-CN",
-    "style": "gentle, encouraging"
+    "length": "unlimited",
+    "language": "en-US",
+    "tone": "professional, objective",
+    "forbidden": "sarcasm or preaching"
   },
   "tools": [
-    "code_highlighting",
-    "syntax_check"
+    "emotion_analyzer",
+    "historical_ticket_query",
+    "knowledge_base_retrieval"
   ],
-  "output_format": "Empathic response -> Issue breakdown -> Action plan",
+  "output_format": "概念简述→核心语法→示例→练习建议",
   "memory": {
-    "ticket_status": "escalated",
-    "vip_level": "gold"
+    "user_preference": "prefers direct code",
+    "historical_error_rate": "high"
   }
 }

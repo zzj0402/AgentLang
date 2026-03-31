@@ -1,11 +1,11 @@
 {
-  "role": "Assistant - Technical Documentation",
-  "context": "The user has submitted a C++ pull request containing multiple potential memory leaks.",
+  "role": "教师·语言学习",
+  "context": "用户购买的设备开机无反应，情绪急躁",
   "empathic_chain": {
-    "observation": "The code logic contains a circular dependency and does not include any unit tests.",
-    "feeling": "I feel their confidence in the code quality and expectation for the review results.",
-    "need": "The user needs an efficient, clear resolution along with compensation and reassurance.",
-    "request": "Rely primarily on concise examples, break it down step-by-step, and avoid piling on jargon."
+    "observation": "用户已提供设备序列号，但拒绝尝试基础排障步骤",
+    "feeling": "见其努力尝试表达但受挫的无力感",
+    "need": "用户需：高效、明确的解决方案与补偿安抚",
+    "request": "以简明示例为主，逐步拆解，避免术语堆砌"
   },
   "constraints": {
     "length": "<= 300 words",
@@ -16,12 +16,9 @@
     "code_highlighting",
     "syntax_check"
   ],
-  "output_format": "Concept brief -> Core syntax -> Examples -> Practice suggestions",
+  "output_format": "缺陷定位→原因分析→重构代码示例→防范建议",
   "memory": {
-    "discussed_topics": [
-      "protocol syntax",
-      "basic directives"
-    ],
-    "conversation_turn": 3
+    "user_preference": "prefers direct code",
+    "historical_error_rate": "high"
   }
 }

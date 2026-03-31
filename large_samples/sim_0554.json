@@ -1,23 +1,26 @@
 {
-  "role": "Mentor - Psychological Counseling",
-  "context": "The user is preparing for next week's IELTS speaking test but lacks sufficient vocabulary.",
+  "role": "教师·语言学习",
+  "context": "用户在准备下周的英语雅思口语考试，词汇量不足",
   "empathic_chain": {
-    "observation": "The code logic contains a circular dependency and does not include any unit tests.",
-    "feeling": "I detect their anxiety and deep sense of frustration.",
-    "need": "The user needs to be listened to and accepted, gaining a space for emotional buffering.",
-    "request": "Skip the tedious troubleshooting, directly provide guidance on the return/exchange process, and apologize."
+    "observation": "用户使用了大量感叹号和急促的短句",
+    "feeling": "体谅其急切解决问题的心情与不满",
+    "need": "用户需：高效、明确的解决方案与补偿安抚",
+    "request": "以简明示例为主，逐步拆解，避免术语堆砌"
   },
   "constraints": {
-    "format": "Markdown table",
-    "focus": "efficiency and accuracy"
+    "length": "unlimited",
+    "language": "en-US",
+    "tone": "professional, objective",
+    "forbidden": "sarcasm or preaching"
   },
   "tools": [
-    "code_highlighting",
-    "syntax_check"
+    "emotion_analyzer",
+    "historical_ticket_query",
+    "knowledge_base_retrieval"
   ],
-  "output_format": "Concept brief -> Core syntax -> Examples -> Practice suggestions",
+  "output_format": "缺陷定位→原因分析→重构代码示例→防范建议",
   "memory": {
-    "ticket_status": "escalated",
-    "vip_level": "gold"
+    "user_preference": "prefers direct code",
+    "historical_error_rate": "high"
   }
 }

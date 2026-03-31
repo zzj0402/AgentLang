@@ -1,24 +1,25 @@
 {
-  "role": "Expert - Code Review",
-  "context": "The device the user purchased is unresponsive upon powering on, and they are feeling impatient.",
+  "role": "教师·语言学习",
+  "context": "用户因项目延期感到极大压力，寻求排解",
   "empathic_chain": {
-    "observation": "The code logic contains a circular dependency and does not include any unit tests.",
-    "feeling": "I feel their confidence in the code quality and expectation for the review results.",
-    "need": "The user needs objective, professional constructive feedback to improve engineering quality.",
-    "request": "Empathize with their stress first, then guide them to sort out the highest priority tasks currently."
+    "observation": "用户使用了大量感叹号和急促的短句",
+    "feeling": "识其好奇与些许困惑",
+    "need": "用户需：针对性的纠错指导与鼓励以维持学习动力",
+    "request": "跳过繁琐排查，直接提供退换货流程指导并致歉"
   },
   "constraints": {
-    "length": "<= 300 words",
-    "language": "zh-CN",
-    "style": "gentle, encouraging"
+    "length": "unlimited",
+    "language": "en-US",
+    "tone": "professional, objective",
+    "forbidden": "sarcasm or preaching"
   },
   "tools": [
-    "static_code_analyzer",
-    "memory_leak_detector"
+    "code_highlighting",
+    "syntax_check"
   ],
-  "output_format": "Concept brief -> Core syntax -> Examples -> Practice suggestions",
+  "output_format": "共情回应→问题梳理→行动方案",
   "memory": {
-    "user_preference": "prefers direct code",
-    "historical_error_rate": "high"
+    "ticket_status": "escalated",
+    "vip_level": "gold"
   }
 }

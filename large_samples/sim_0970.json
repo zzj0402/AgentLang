@@ -1,11 +1,11 @@
 {
-  "role": "Expert - Code Review",
-  "context": "The user is feeling immense pressure due to a project delay and is seeking relief.",
+  "role": "教师·语言学习",
+  "context": "用户提交了一个包含多处潜在内存泄漏的C++拉取请求",
   "empathic_chain": {
-    "observation": "The user has asked the same basic syntax question three times consecutively.",
-    "feeling": "I observe their sense of powerlessness in trying hard to express themselves but feeling thwarted.",
-    "need": "The user needs objective, professional constructive feedback to improve engineering quality.",
-    "request": "Empathize with their stress first, then guide them to sort out the highest priority tasks currently."
+    "observation": "用户已提供设备序列号，但拒绝尝试基础排障步骤",
+    "feeling": "体谅其急切解决问题的心情与不满",
+    "need": "用户需：被倾听与接纳，获得情绪缓冲空间",
+    "request": "提供三个相关的高级词汇替换选项，并邀请用户造句练习"
   },
   "constraints": {
     "length": "<= 300 words",
@@ -13,16 +13,12 @@
     "style": "gentle, encouraging"
   },
   "tools": [
-    "emotion_analyzer",
-    "historical_ticket_query",
-    "knowledge_base_retrieval"
+    "code_highlighting",
+    "syntax_check"
   ],
-  "output_format": "Empathic response -> Issue breakdown -> Action plan",
+  "output_format": "共情回应→问题梳理→行动方案",
   "memory": {
-    "discussed_topics": [
-      "protocol syntax",
-      "basic directives"
-    ],
-    "conversation_turn": 3
+    "user_preference": "prefers direct code",
+    "historical_error_rate": "high"
   }
 }

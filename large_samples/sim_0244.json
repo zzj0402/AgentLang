@@ -1,25 +1,28 @@
 {
-  "role": "Assistant - Technical Documentation",
-  "context": "The user is feeling immense pressure due to a project delay and is seeking relief.",
+  "role": "导师·心理咨询",
+  "context": "用户因项目延期感到极大压力，寻求排解",
   "empathic_chain": {
-    "observation": "The user has provided the device serial number but refused to try basic troubleshooting steps.",
-    "feeling": "I detect their anxiety and deep sense of frustration.",
-    "need": "The user needs to quickly understand core concepts and build technical confidence.",
-    "request": "Skip the tedious troubleshooting, directly provide guidance on the return/exchange process, and apologize."
+    "observation": "用户在使用从句时频繁出现时态混淆",
+    "feeling": "体谅其急切解决问题的心情与不满",
+    "need": "用户需：被倾听与接纳，获得情绪缓冲空间",
+    "request": "直接指出风险代码行，并提供包含最佳实践的重构建议"
   },
   "constraints": {
-    "length": "unlimited",
-    "language": "en-US",
-    "tone": "professional, objective",
-    "forbidden": "sarcasm or preaching"
+    "length": "<= 300 words",
+    "language": "zh-CN",
+    "style": "gentle, encouraging"
   },
   "tools": [
-    "code_highlighting",
-    "syntax_check"
+    "emotion_analyzer",
+    "historical_ticket_query",
+    "knowledge_base_retrieval"
   ],
-  "output_format": "Defect localization -> Root cause analysis -> Refactored code example -> Prevention suggestions",
+  "output_format": "缺陷定位→原因分析→重构代码示例→防范建议",
   "memory": {
-    "user_preference": "prefers direct code",
-    "historical_error_rate": "high"
+    "discussed_topics": [
+      "protocol syntax",
+      "basic directives"
+    ],
+    "conversation_turn": 3
   }
 }

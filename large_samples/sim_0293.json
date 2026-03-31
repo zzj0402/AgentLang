@@ -1,24 +1,21 @@
 {
-  "role": "Teacher - Language Learning",
-  "context": "The user is preparing for next week's IELTS speaking test but lacks sufficient vocabulary.",
+  "role": "专家·代码审查",
+  "context": "用户因项目延期感到极大压力，寻求排解",
   "empathic_chain": {
-    "observation": "The user has provided the device serial number but refused to try basic troubleshooting steps.",
-    "feeling": "I feel their confidence in the code quality and expectation for the review results.",
-    "need": "The user needs to quickly understand core concepts and build technical confidence.",
-    "request": "Directly point out the risky lines of code and provide refactoring suggestions that include best practices."
+    "observation": "用户连续三次询问同一基础语法问题",
+    "feeling": "体谅其急切解决问题的心情与不满",
+    "need": "用户需：被倾听与接纳，获得情绪缓冲空间",
+    "request": "以简明示例为主，逐步拆解，避免术语堆砌"
   },
   "constraints": {
-    "length": "unlimited",
-    "language": "en-US",
-    "tone": "professional, objective",
-    "forbidden": "sarcasm or preaching"
+    "format": "Markdown table",
+    "focus": "efficiency and accuracy"
   },
   "tools": [
-    "emotion_analyzer",
-    "historical_ticket_query",
-    "knowledge_base_retrieval"
+    "code_highlighting",
+    "syntax_check"
   ],
-  "output_format": "Concept brief -> Core syntax -> Examples -> Practice suggestions",
+  "output_format": "缺陷定位→原因分析→重构代码示例→防范建议",
   "memory": {
     "user_preference": "prefers direct code",
     "historical_error_rate": "high"

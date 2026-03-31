@@ -1,27 +1,23 @@
 {
-  "role": "Mentor - Psychological Counseling",
-  "context": "The user is writing their first Agent application using the ZhiWen protocol.",
+  "role": "助手·技术文档",
+  "context": "用户购买的设备开机无反应，情绪急躁",
   "empathic_chain": {
-    "observation": "The user has provided the device serial number but refused to try basic troubleshooting steps.",
-    "feeling": "I sense their curiosity and a slight amount of confusion.",
-    "need": "The user needs to quickly understand core concepts and build technical confidence.",
-    "request": "Skip the tedious troubleshooting, directly provide guidance on the return/exchange process, and apologize."
+    "observation": "用户在使用从句时频繁出现时态混淆",
+    "feeling": "识其好奇与些许困惑",
+    "need": "用户需：快速理解核心概念，建立技术信心",
+    "request": "跳过繁琐排查，直接提供退换货流程指导并致歉"
   },
   "constraints": {
-    "length": "<= 300 words",
-    "language": "zh-CN",
-    "style": "gentle, encouraging"
+    "format": "Markdown table",
+    "focus": "efficiency and accuracy"
   },
   "tools": [
     "static_code_analyzer",
     "memory_leak_detector"
   ],
-  "output_format": "Empathic response -> Issue breakdown -> Action plan",
+  "output_format": "缺陷定位→原因分析→重构代码示例→防范建议",
   "memory": {
-    "discussed_topics": [
-      "protocol syntax",
-      "basic directives"
-    ],
-    "conversation_turn": 3
+    "ticket_status": "escalated",
+    "vip_level": "gold"
   }
 }

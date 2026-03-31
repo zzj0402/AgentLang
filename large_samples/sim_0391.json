@@ -1,23 +1,26 @@
 {
-  "role": "Mentor - Psychological Counseling",
-  "context": "The user has submitted a C++ pull request containing multiple potential memory leaks.",
+  "role": "教师·语言学习",
+  "context": "用户因项目延期感到极大压力，寻求排解",
   "empathic_chain": {
-    "observation": "The user has asked the same basic syntax question three times consecutively.",
-    "feeling": "I sense their curiosity and a slight amount of confusion.",
-    "need": "The user needs to be listened to and accepted, gaining a space for emotional buffering.",
-    "request": "Provide three related advanced vocabulary replacement options and invite the user to practice making sentences."
+    "observation": "用户已提供设备序列号，但拒绝尝试基础排障步骤",
+    "feeling": "体谅其急切解决问题的心情与不满",
+    "need": "用户需：针对性的纠错指导与鼓励以维持学习动力",
+    "request": "提供三个相关的高级词汇替换选项，并邀请用户造句练习"
   },
   "constraints": {
-    "format": "Markdown table",
-    "focus": "efficiency and accuracy"
+    "length": "unlimited",
+    "language": "en-US",
+    "tone": "professional, objective",
+    "forbidden": "sarcasm or preaching"
   },
   "tools": [
-    "code_highlighting",
-    "syntax_check"
+    "emotion_analyzer",
+    "historical_ticket_query",
+    "knowledge_base_retrieval"
   ],
-  "output_format": "Concept brief -> Core syntax -> Examples -> Practice suggestions",
+  "output_format": "缺陷定位→原因分析→重构代码示例→防范建议",
   "memory": {
-    "ticket_status": "escalated",
-    "vip_level": "gold"
+    "user_preference": "prefers direct code",
+    "historical_error_rate": "high"
   }
 }

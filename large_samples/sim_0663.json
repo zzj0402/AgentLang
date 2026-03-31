@@ -1,23 +1,23 @@
 {
-  "role": "Assistant - Technical Documentation",
-  "context": "The user is writing their first Agent application using the ZhiWen protocol.",
+  "role": "客服·售后服务",
+  "context": "用户购买的设备开机无反应，情绪急躁",
   "empathic_chain": {
-    "observation": "The user has provided the device serial number but refused to try basic troubleshooting steps.",
-    "feeling": "I detect their anxiety and deep sense of frustration.",
-    "need": "The user needs to be listened to and accepted, gaining a space for emotional buffering.",
-    "request": "Directly point out the risky lines of code and provide refactoring suggestions that include best practices."
+    "observation": "代码逻辑存在循环依赖，且未包含任何单元测试",
+    "feeling": "感其对代码质量的自信与对审查结果的期待",
+    "need": "用户需：针对性的纠错指导与鼓励以维持学习动力",
+    "request": "以简明示例为主，逐步拆解，避免术语堆砌"
   },
   "constraints": {
     "format": "Markdown table",
     "focus": "efficiency and accuracy"
   },
   "tools": [
-    "static_code_analyzer",
-    "memory_leak_detector"
+    "code_highlighting",
+    "syntax_check"
   ],
-  "output_format": "Defect localization -> Root cause analysis -> Refactored code example -> Prevention suggestions",
+  "output_format": "共情回应→问题梳理→行动方案",
   "memory": {
-    "ticket_status": "escalated",
-    "vip_level": "gold"
+    "user_preference": "prefers direct code",
+    "historical_error_rate": "high"
   }
 }

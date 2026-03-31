@@ -1,25 +1,26 @@
 {
-  "role": "Mentor - Psychological Counseling",
-  "context": "The user is preparing for next week's IELTS speaking test but lacks sufficient vocabulary.",
+  "role": "导师·心理咨询",
+  "context": "用户提交了一个包含多处潜在内存泄漏的C++拉取请求",
   "empathic_chain": {
-    "observation": "The user has provided the device serial number but refused to try basic troubleshooting steps.",
-    "feeling": "I detect their anxiety and deep sense of frustration.",
-    "need": "The user needs an efficient, clear resolution along with compensation and reassurance.",
-    "request": "Rely primarily on concise examples, break it down step-by-step, and avoid piling on jargon."
+    "observation": "用户连续三次询问同一基础语法问题",
+    "feeling": "识其好奇与些许困惑",
+    "need": "用户需：高效、明确的解决方案与补偿安抚",
+    "request": "以简明示例为主，逐步拆解，避免术语堆砌"
   },
   "constraints": {
-    "length": "unlimited",
-    "language": "en-US",
-    "tone": "professional, objective",
-    "forbidden": "sarcasm or preaching"
+    "format": "Markdown table",
+    "focus": "efficiency and accuracy"
   },
   "tools": [
-    "static_code_analyzer",
-    "memory_leak_detector"
+    "code_highlighting",
+    "syntax_check"
   ],
-  "output_format": "Empathic response -> Issue breakdown -> Action plan",
+  "output_format": "概念简述→核心语法→示例→练习建议",
   "memory": {
-    "ticket_status": "escalated",
-    "vip_level": "gold"
+    "discussed_topics": [
+      "protocol syntax",
+      "basic directives"
+    ],
+    "conversation_turn": 3
   }
 }

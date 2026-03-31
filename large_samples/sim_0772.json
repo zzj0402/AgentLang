@@ -1,21 +1,23 @@
 {
-  "role": "Assistant - Technical Documentation",
-  "context": "The user has submitted a C++ pull request containing multiple potential memory leaks.",
+  "role": "专家·代码审查",
+  "context": "用户正在使用智文协议编写首个Agent应用",
   "empathic_chain": {
-    "observation": "The code logic contains a circular dependency and does not include any unit tests.",
-    "feeling": "I detect their anxiety and deep sense of frustration.",
-    "need": "The user needs targeted correction guidance and encouragement to maintain learning motivation.",
-    "request": "Rely primarily on concise examples, break it down step-by-step, and avoid piling on jargon."
+    "observation": "用户已提供设备序列号，但拒绝尝试基础排障步骤",
+    "feeling": "察觉其焦虑与深深的挫败感",
+    "need": "用户需：被倾听与接纳，获得情绪缓冲空间",
+    "request": "以简明示例为主，逐步拆解，避免术语堆砌"
   },
   "constraints": {
-    "format": "Markdown table",
-    "focus": "efficiency and accuracy"
+    "length": "unlimited",
+    "language": "en-US",
+    "tone": "professional, objective",
+    "forbidden": "sarcasm or preaching"
   },
   "tools": [
-    "static_code_analyzer",
-    "memory_leak_detector"
+    "code_highlighting",
+    "syntax_check"
   ],
-  "output_format": "Concept brief -> Core syntax -> Examples -> Practice suggestions",
+  "output_format": "共情回应→问题梳理→行动方案",
   "memory": {
     "discussed_topics": [
       "protocol syntax",

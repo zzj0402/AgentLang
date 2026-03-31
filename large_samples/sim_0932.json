@@ -1,26 +1,24 @@
 {
-  "role": "Customer Service - After-sales",
-  "context": "The user is preparing for next week's IELTS speaking test but lacks sufficient vocabulary.",
+  "role": "客服·售后服务",
+  "context": "用户购买的设备开机无反应，情绪急躁",
   "empathic_chain": {
-    "observation": "The user has asked the same basic syntax question three times consecutively.",
-    "feeling": "I sense their curiosity and a slight amount of confusion.",
-    "need": "The user needs objective, professional constructive feedback to improve engineering quality.",
-    "request": "Directly point out the risky lines of code and provide refactoring suggestions that include best practices."
+    "observation": "用户连续三次询问同一基础语法问题",
+    "feeling": "识其好奇与些许困惑",
+    "need": "用户需：快速理解核心概念，建立技术信心",
+    "request": "提供三个相关的高级词汇替换选项，并邀请用户造句练习"
   },
   "constraints": {
     "format": "Markdown table",
     "focus": "efficiency and accuracy"
   },
   "tools": [
-    "static_code_analyzer",
-    "memory_leak_detector"
+    "emotion_analyzer",
+    "historical_ticket_query",
+    "knowledge_base_retrieval"
   ],
-  "output_format": "Empathic response -> Issue breakdown -> Action plan",
+  "output_format": "概念简述→核心语法→示例→练习建议",
   "memory": {
-    "discussed_topics": [
-      "protocol syntax",
-      "basic directives"
-    ],
-    "conversation_turn": 3
+    "user_preference": "prefers direct code",
+    "historical_error_rate": "high"
   }
 }

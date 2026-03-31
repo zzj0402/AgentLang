@@ -2,411 +2,411 @@
   "role": "专家·代码审查",
   "context": [
     {
-      "sender": "CodeExpert",
+      "sender": "审查员",
       "message": "模块0的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Reviewer",
+      "sender": "审查员",
       "message": "模块1的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Reviewer",
+      "sender": "代码专家",
       "message": "模块2的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "CodeExpert",
+      "sender": "审查员",
       "message": "模块3的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "CodeExpert",
+      "sender": "协调员",
       "message": "模块4的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Researcher",
+      "sender": "研究员",
       "message": "模块5的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Orchestrator",
+      "sender": "审查员",
       "message": "模块6的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Reviewer",
+      "sender": "协调员",
       "message": "模块7的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Researcher",
+      "sender": "审查员",
       "message": "模块8的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "CodeExpert",
+      "sender": "审查员",
       "message": "模块9的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Orchestrator",
+      "sender": "代码专家",
       "message": "模块10的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Reviewer",
+      "sender": "代码专家",
       "message": "模块11的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Orchestrator",
+      "sender": "代码专家",
       "message": "模块12的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Researcher",
+      "sender": "审查员",
       "message": "模块13的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "CodeExpert",
+      "sender": "协调员",
       "message": "模块14的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Researcher",
+      "sender": "研究员",
       "message": "模块15的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Orchestrator",
+      "sender": "研究员",
       "message": "模块16的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Researcher",
+      "sender": "协调员",
       "message": "模块17的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Researcher",
+      "sender": "协调员",
       "message": "模块18的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "CodeExpert",
+      "sender": "协调员",
       "message": "模块19的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "CodeExpert",
+      "sender": "审查员",
       "message": "模块20的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Orchestrator",
+      "sender": "研究员",
       "message": "模块21的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Orchestrator",
+      "sender": "代码专家",
       "message": "模块22的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Researcher",
+      "sender": "协调员",
       "message": "模块23的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Reviewer",
+      "sender": "研究员",
       "message": "模块24的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Researcher",
+      "sender": "审查员",
       "message": "模块25的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Orchestrator",
+      "sender": "协调员",
       "message": "模块26的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Researcher",
+      "sender": "协调员",
       "message": "模块27的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "CodeExpert",
+      "sender": "协调员",
       "message": "模块28的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Researcher",
+      "sender": "代码专家",
       "message": "模块29的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "CodeExpert",
+      "sender": "审查员",
       "message": "模块30的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Reviewer",
+      "sender": "研究员",
       "message": "模块31的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "CodeExpert",
+      "sender": "审查员",
       "message": "模块32的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Reviewer",
+      "sender": "审查员",
       "message": "模块33的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Reviewer",
+      "sender": "协调员",
       "message": "模块34的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Researcher",
+      "sender": "审查员",
       "message": "模块35的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Orchestrator",
+      "sender": "协调员",
       "message": "模块36的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Orchestrator",
+      "sender": "协调员",
       "message": "模块37的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Researcher",
+      "sender": "协调员",
       "message": "模块38的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Reviewer",
+      "sender": "协调员",
       "message": "模块39的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Orchestrator",
+      "sender": "研究员",
       "message": "模块40的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "CodeExpert",
+      "sender": "研究员",
       "message": "模块41的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Orchestrator",
+      "sender": "研究员",
       "message": "模块42的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Reviewer",
+      "sender": "代码专家",
       "message": "模块43的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Reviewer",
+      "sender": "研究员",
       "message": "模块44的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "CodeExpert",
+      "sender": "协调员",
       "message": "模块45的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Researcher",
+      "sender": "审查员",
       "message": "模块46的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Orchestrator",
+      "sender": "代码专家",
       "message": "模块47的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Researcher",
+      "sender": "研究员",
       "message": "模块48的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Orchestrator",
+      "sender": "协调员",
       "message": "模块49的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "CodeExpert",
+      "sender": "代码专家",
       "message": "模块50的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Researcher",
+      "sender": "协调员",
       "message": "模块51的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Orchestrator",
+      "sender": "代码专家",
       "message": "模块52的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Orchestrator",
+      "sender": "协调员",
       "message": "模块53的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Reviewer",
+      "sender": "代码专家",
       "message": "模块54的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Reviewer",
+      "sender": "审查员",
       "message": "模块55的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Orchestrator",
+      "sender": "审查员",
       "message": "模块56的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Reviewer",
+      "sender": "协调员",
       "message": "模块57的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Orchestrator",
+      "sender": "代码专家",
       "message": "模块58的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Orchestrator",
+      "sender": "代码专家",
       "message": "模块59的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Reviewer",
+      "sender": "研究员",
       "message": "模块60的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Reviewer",
+      "sender": "审查员",
       "message": "模块61的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Reviewer",
+      "sender": "代码专家",
       "message": "模块62的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Researcher",
+      "sender": "研究员",
       "message": "模块63的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "CodeExpert",
+      "sender": "审查员",
       "message": "模块64的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Orchestrator",
+      "sender": "协调员",
       "message": "模块65的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "CodeExpert",
+      "sender": "研究员",
       "message": "模块66的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Researcher",
+      "sender": "审查员",
       "message": "模块67的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Researcher",
+      "sender": "协调员",
       "message": "模块68的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Orchestrator",
+      "sender": "研究员",
       "message": "模块69的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Orchestrator",
+      "sender": "审查员",
       "message": "模块70的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "CodeExpert",
+      "sender": "协调员",
       "message": "模块71的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "CodeExpert",
+      "sender": "协调员",
       "message": "模块72的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Reviewer",
+      "sender": "协调员",
       "message": "模块73的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "CodeExpert",
+      "sender": "研究员",
       "message": "模块74的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "CodeExpert",
+      "sender": "审查员",
       "message": "模块75的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Researcher",
+      "sender": "协调员",
       "message": "模块76的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "CodeExpert",
+      "sender": "研究员",
       "message": "模块77的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Reviewer",
+      "sender": "协调员",
       "message": "模块78的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "CodeExpert",
+      "sender": "研究员",
       "message": "模块79的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Orchestrator",
+      "sender": "研究员",
       "message": "模块80的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Reviewer",
+      "sender": "审查员",
       "message": "模块81的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Orchestrator",
+      "sender": "协调员",
       "message": "模块82的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Researcher",
+      "sender": "协调员",
       "message": "模块83的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Reviewer",
+      "sender": "研究员",
       "message": "模块84的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Reviewer",
+      "sender": "代码专家",
       "message": "模块85的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "CodeExpert",
+      "sender": "协调员",
       "message": "模块86的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Reviewer",
+      "sender": "研究员",
       "message": "模块87的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Researcher",
+      "sender": "代码专家",
       "message": "模块88的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Researcher",
+      "sender": "研究员",
       "message": "模块89的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Researcher",
+      "sender": "代码专家",
       "message": "模块90的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Reviewer",
+      "sender": "协调员",
       "message": "模块91的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Reviewer",
+      "sender": "研究员",
       "message": "模块92的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "CodeExpert",
+      "sender": "审查员",
       "message": "模块93的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Researcher",
+      "sender": "协调员",
       "message": "模块94的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "CodeExpert",
+      "sender": "代码专家",
       "message": "模块95的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Researcher",
+      "sender": "研究员",
       "message": "模块96的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "CodeExpert",
+      "sender": "协调员",
       "message": "模块97的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Orchestrator",
+      "sender": "代码专家",
       "message": "模块98的数据已经处理完毕，当前状态为等待审核。"
     },
     {
-      "sender": "Orchestrator",
+      "sender": "代码专家",
       "message": "模块99的数据已经处理完毕，当前状态为等待审核。"
     }
   ],
   "empathic_chain": {
     "observation": "多智能体连续通讯100轮，已达成一致",
-    "feeling": "识其好奇与些许困惑",
-    "need": "用户需：客观、专业的建设性反馈以提升工程质量",
-    "request": "先共情其压力，再引导其梳理当前优先级最高的事项"
+    "feeling": "感其对代码质量的自信与对审查结果的期待",
+    "need": "用户需：被倾听与接纳，获得情绪缓冲空间",
+    "request": "直接指出风险代码行，并提供包含最佳实践的重构建议"
   },
-  "output_format": "缺陷定位→原因分析→重构代码示例→防范建议"
+  "output_format": "共情回应→问题梳理→行动方案"
 }

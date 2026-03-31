@@ -1,11 +1,11 @@
 {
-  "role": "Mentor - Psychological Counseling",
-  "context": "The device the user purchased is unresponsive upon powering on, and they are feeling impatient.",
+  "role": "导师·心理咨询",
+  "context": "用户正在使用智文协议编写首个Agent应用",
   "empathic_chain": {
-    "observation": "The user used a large number of exclamation marks and rapid, short sentences.",
-    "feeling": "I sense their curiosity and a slight amount of confusion.",
-    "need": "The user needs objective, professional constructive feedback to improve engineering quality.",
-    "request": "Directly point out the risky lines of code and provide refactoring suggestions that include best practices."
+    "observation": "用户连续三次询问同一基础语法问题",
+    "feeling": "感其对代码质量的自信与对审查结果的期待",
+    "need": "用户需：快速理解核心概念，建立技术信心",
+    "request": "跳过繁琐排查，直接提供退换货流程指导并致歉"
   },
   "constraints": {
     "length": "<= 300 words",
@@ -13,15 +13,13 @@
     "style": "gentle, encouraging"
   },
   "tools": [
-    "static_code_analyzer",
-    "memory_leak_detector"
+    "emotion_analyzer",
+    "historical_ticket_query",
+    "knowledge_base_retrieval"
   ],
-  "output_format": "Empathic response -> Issue breakdown -> Action plan",
+  "output_format": "概念简述→核心语法→示例→练习建议",
   "memory": {
-    "discussed_topics": [
-      "protocol syntax",
-      "basic directives"
-    ],
-    "conversation_turn": 3
+    "user_preference": "prefers direct code",
+    "historical_error_rate": "high"
   }
 }

@@ -6,10 +6,15 @@ def count_tokens(text: str, model: str = "cl100k_base") -> int:
     enc = tiktoken.get_encoding(model)
     return len(enc.encode(text))
 
-def generate_large_prompt(round_idx, lang="zh"):
-    if lang == "zh":
+def generate_large_prompt(round_idx, lang="zw"):
+    if lang == "zw":
+        # Dense Classical Chinese (文言文)
+        return f"第{round_idx}轮深析：观巨量并发致系统迟滞。初诊为库连接池竭。须即查微服务拓扑，引高效熔断以防级联故障。又鉴前内存泄漏史，宜于测试境行全域静态分析，保资源尽释。"
+    elif lang == "zh":
+        # Verbose Simplified Chinese (简体中文)
         return f"这是第{round_idx}轮的深度分析报告。我们观察到系统在处理大规模并发请求时出现了明显的延迟峰值。根据架构师的初步诊断，这可能与数据库连接池的耗尽有关。我们需要立即审查当前微服务之间的依赖拓扑图，并考虑引入一种更有效的熔断机制以防止级联故障。此外，考虑到内存泄漏的历史记录，建议在测试环境中运行全面的静态分析工具以确保没有任何未释放的资源。"
     else:
+        # Verbose English (英文)
         return f"This is the in-depth analysis report for round {round_idx}. We have observed significant latency spikes when the system processes large-scale concurrent requests. According to the architect's preliminary diagnosis, this may be related to the exhaustion of the database connection pool. We need to immediately review the dependency topology graph among the current microservices and consider introducing a more effective circuit breaker mechanism to prevent cascading failures. In addition, considering the history of memory leaks, it is recommended to run comprehensive static analysis tools in the test environment to ensure there are no unreleased resources."
 
 def generate_999_rounds():
@@ -20,18 +25,20 @@ def generate_999_rounds():
     json_en_arr = []
 
     for i in range(1, 1000):
-        agent = "分析师A" if i % 2 != 0 else "架构师B"
+        agent_zw = "析者甲" if i % 2 != 0 else "构者乙"
+        agent_zh = "分析师A" if i % 2 != 0 else "架构师B"
         agent_en = "AnalystA" if i % 2 != 0 else "ArchitectB"
 
+        zw_text = generate_large_prompt(i, "zw")
         zh_text = generate_large_prompt(i, "zh")
         en_text = generate_large_prompt(i, "en")
 
-        # 1. ZhiWen Format (Dense, Chinese text)
-        zw_content += f"  {agent}: {zh_text}\n"
+        # 1. ZhiWen Format (Dense Classical Chinese text)
+        zw_content += f"  {agent_zw}: {zw_text}\n"
 
         # 2. JSON Format (Simplified Chinese text)
         json_zh_arr.append({
-            "sender": agent,
+            "sender": agent_zh,
             "message": zh_text
         })
 
@@ -92,7 +99,7 @@ def main():
     print("\nBenchmark Results (999 Rounds, Large Prompts):")
 
     results = [
-        ["ZhiWen (.zw) [Simplified Chinese]", zw_tokens],
+        ["ZhiWen (.zw) [Classical Chinese]", zw_tokens],
         ["JSON (.json) [Simplified Chinese]", json_zh_tokens],
         ["JSON (.json) [English]", json_en_tokens]
     ]
@@ -100,15 +107,14 @@ def main():
     headers = ["Format", "Tokens (cl100k_base)"]
     print(tabulate(results, headers=headers, tablefmt="github"))
 
-    # Structural Reduction (Chinese JSON vs Chinese ZhiWen)
-    struct_red = (1 - (zw_tokens / json_zh_tokens)) * 100
+    # Total Reduction vs Simplified Chinese JSON
+    vs_zh_json = (1 - (zw_tokens / json_zh_tokens)) * 100
 
-    # Absolute Reduction (English JSON vs Chinese ZhiWen)
-    abs_red = (1 - (zw_tokens / json_en_tokens)) * 100
+    # Total Reduction vs English JSON
+    vs_en_json = (1 - (zw_tokens / json_en_tokens)) * 100
 
-    print(f"\nStructural Overhead Reduction (Chinese JSON -> ZhiWen): {struct_red:.2f}%")
-    print(f"Absolute Token Reduction (English JSON -> ZhiWen): {abs_red:.2f}%")
-    print(f"Linguistic Bias Penalty (English JSON -> Chinese JSON): {((json_zh_tokens / json_en_tokens) - 1) * 100:.2f}% (Chinese JSON uses more tokens due to tokenizer optimization)")
+    print(f"\nToken Reduction (Simplified Chinese JSON -> Classical Chinese ZhiWen): {vs_zh_json:.2f}%")
+    print(f"Token Reduction (English JSON -> Classical Chinese ZhiWen): {vs_en_json:.2f}%")
 
 if __name__ == "__main__":
     main()

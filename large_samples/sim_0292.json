@@ -1,11 +1,11 @@
 {
-  "role": "Assistant - Technical Documentation",
-  "context": "The user is preparing for next week's IELTS speaking test but lacks sufficient vocabulary.",
+  "role": "客服·售后服务",
+  "context": "用户提交了一个包含多处潜在内存泄漏的C++拉取请求",
   "empathic_chain": {
-    "observation": "The code logic contains a circular dependency and does not include any unit tests.",
-    "feeling": "I sense their curiosity and a slight amount of confusion.",
-    "need": "The user needs to quickly understand core concepts and build technical confidence.",
-    "request": "Skip the tedious troubleshooting, directly provide guidance on the return/exchange process, and apologize."
+    "observation": "用户连续三次询问同一基础语法问题",
+    "feeling": "见其努力尝试表达但受挫的无力感",
+    "need": "用户需：客观、专业的建设性反馈以提升工程质量",
+    "request": "先共情其压力，再引导其梳理当前优先级最高的事项"
   },
   "constraints": {
     "length": "<= 300 words",
@@ -13,10 +13,11 @@
     "style": "gentle, encouraging"
   },
   "tools": [
-    "code_highlighting",
-    "syntax_check"
+    "emotion_analyzer",
+    "historical_ticket_query",
+    "knowledge_base_retrieval"
   ],
-  "output_format": "Empathic response -> Issue breakdown -> Action plan",
+  "output_format": "概念简述→核心语法→示例→练习建议",
   "memory": {
     "ticket_status": "escalated",
     "vip_level": "gold"

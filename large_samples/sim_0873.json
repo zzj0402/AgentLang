@@ -1,25 +1,26 @@
 {
-  "role": "Expert - Code Review",
-  "context": "The user is preparing for next week's IELTS speaking test but lacks sufficient vocabulary.",
+  "role": "客服·售后服务",
+  "context": "用户正在使用智文协议编写首个Agent应用",
   "empathic_chain": {
-    "observation": "The user has provided the device serial number but refused to try basic troubleshooting steps.",
-    "feeling": "I sense their curiosity and a slight amount of confusion.",
-    "need": "The user needs to quickly understand core concepts and build technical confidence.",
-    "request": "Skip the tedious troubleshooting, directly provide guidance on the return/exchange process, and apologize."
+    "observation": "用户在使用从句时频繁出现时态混淆",
+    "feeling": "察觉其焦虑与深深的挫败感",
+    "need": "用户需：被倾听与接纳，获得情绪缓冲空间",
+    "request": "先共情其压力，再引导其梳理当前优先级最高的事项"
   },
   "constraints": {
-    "length": "<= 300 words",
-    "language": "zh-CN",
-    "style": "gentle, encouraging"
+    "length": "unlimited",
+    "language": "en-US",
+    "tone": "professional, objective",
+    "forbidden": "sarcasm or preaching"
   },
   "tools": [
     "emotion_analyzer",
     "historical_ticket_query",
     "knowledge_base_retrieval"
   ],
-  "output_format": "Defect localization -> Root cause analysis -> Refactored code example -> Prevention suggestions",
+  "output_format": "概念简述→核心语法→示例→练习建议",
   "memory": {
-    "user_preference": "prefers direct code",
-    "historical_error_rate": "high"
+    "ticket_status": "escalated",
+    "vip_level": "gold"
   }
 }

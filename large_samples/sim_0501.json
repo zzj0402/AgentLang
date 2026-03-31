@@ -1,25 +1,26 @@
 {
-  "role": "Assistant - Technical Documentation",
-  "context": "The user is preparing for next week's IELTS speaking test but lacks sufficient vocabulary.",
+  "role": "导师·心理咨询",
+  "context": "用户提交了一个包含多处潜在内存泄漏的C++拉取请求",
   "empathic_chain": {
-    "observation": "The user has asked the same basic syntax question three times consecutively.",
-    "feeling": "I sense their curiosity and a slight amount of confusion.",
-    "need": "The user needs objective, professional constructive feedback to improve engineering quality.",
-    "request": "Provide three related advanced vocabulary replacement options and invite the user to practice making sentences."
+    "observation": "用户在使用从句时频繁出现时态混淆",
+    "feeling": "识其好奇与些许困惑",
+    "need": "用户需：被倾听与接纳，获得情绪缓冲空间",
+    "request": "提供三个相关的高级词汇替换选项，并邀请用户造句练习"
   },
   "constraints": {
-    "length": "<= 300 words",
-    "language": "zh-CN",
-    "style": "gentle, encouraging"
+    "length": "unlimited",
+    "language": "en-US",
+    "tone": "professional, objective",
+    "forbidden": "sarcasm or preaching"
   },
   "tools": [
     "emotion_analyzer",
     "historical_ticket_query",
     "knowledge_base_retrieval"
   ],
-  "output_format": "Defect localization -> Root cause analysis -> Refactored code example -> Prevention suggestions",
+  "output_format": "概念简述→核心语法→示例→练习建议",
   "memory": {
-    "user_preference": "prefers direct code",
-    "historical_error_rate": "high"
+    "ticket_status": "escalated",
+    "vip_level": "gold"
   }
 }

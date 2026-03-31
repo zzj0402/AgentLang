@@ -1,11 +1,11 @@
 {
-  "role": "Customer Service - After-sales",
-  "context": "The device the user purchased is unresponsive upon powering on, and they are feeling impatient.",
+  "role": "专家·代码审查",
+  "context": "用户提交了一个包含多处潜在内存泄漏的C++拉取请求",
   "empathic_chain": {
-    "observation": "The user used a large number of exclamation marks and rapid, short sentences.",
-    "feeling": "I feel their confidence in the code quality and expectation for the review results.",
-    "need": "The user needs objective, professional constructive feedback to improve engineering quality.",
-    "request": "Provide three related advanced vocabulary replacement options and invite the user to practice making sentences."
+    "observation": "用户使用了大量感叹号和急促的短句",
+    "feeling": "见其努力尝试表达但受挫的无力感",
+    "need": "用户需：针对性的纠错指导与鼓励以维持学习动力",
+    "request": "以简明示例为主，逐步拆解，避免术语堆砌"
   },
   "constraints": {
     "format": "Markdown table",
@@ -15,7 +15,7 @@
     "code_highlighting",
     "syntax_check"
   ],
-  "output_format": "Defect localization -> Root cause analysis -> Refactored code example -> Prevention suggestions",
+  "output_format": "共情回应→问题梳理→行动方案",
   "memory": {
     "discussed_topics": [
       "protocol syntax",

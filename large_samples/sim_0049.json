@@ -1,24 +1,26 @@
 {
-  "role": "Assistant - Technical Documentation",
-  "context": "The user is preparing for next week's IELTS speaking test but lacks sufficient vocabulary.",
+  "role": "专家·代码审查",
+  "context": "用户在准备下周的英语雅思口语考试，词汇量不足",
   "empathic_chain": {
-    "observation": "The user frequently experiences tense confusion when using subordinate clauses.",
-    "feeling": "I detect their anxiety and deep sense of frustration.",
-    "need": "The user needs objective, professional constructive feedback to improve engineering quality.",
-    "request": "Skip the tedious troubleshooting, directly provide guidance on the return/exchange process, and apologize."
+    "observation": "用户在使用从句时频繁出现时态混淆",
+    "feeling": "见其努力尝试表达但受挫的无力感",
+    "need": "用户需：针对性的纠错指导与鼓励以维持学习动力",
+    "request": "提供三个相关的高级词汇替换选项，并邀请用户造句练习"
   },
   "constraints": {
-    "length": "<= 300 words",
-    "language": "zh-CN",
-    "style": "gentle, encouraging"
+    "format": "Markdown table",
+    "focus": "efficiency and accuracy"
   },
   "tools": [
     "static_code_analyzer",
     "memory_leak_detector"
   ],
-  "output_format": "Empathic response -> Issue breakdown -> Action plan",
+  "output_format": "缺陷定位→原因分析→重构代码示例→防范建议",
   "memory": {
-    "ticket_status": "escalated",
-    "vip_level": "gold"
+    "discussed_topics": [
+      "protocol syntax",
+      "basic directives"
+    ],
+    "conversation_turn": 3
   }
 }

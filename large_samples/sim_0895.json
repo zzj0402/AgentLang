@@ -1,11 +1,11 @@
 {
-  "role": "Assistant - Technical Documentation",
-  "context": "The user has submitted a C++ pull request containing multiple potential memory leaks.",
+  "role": "教师·语言学习",
+  "context": "用户在准备下周的英语雅思口语考试，词汇量不足",
   "empathic_chain": {
-    "observation": "The user has provided the device serial number but refused to try basic troubleshooting steps.",
-    "feeling": "I empathize with their urgency to resolve the issue and their dissatisfaction.",
-    "need": "The user needs to quickly understand core concepts and build technical confidence.",
-    "request": "Skip the tedious troubleshooting, directly provide guidance on the return/exchange process, and apologize."
+    "observation": "用户使用了大量感叹号和急促的短句",
+    "feeling": "见其努力尝试表达但受挫的无力感",
+    "need": "用户需：高效、明确的解决方案与补偿安抚",
+    "request": "以简明示例为主，逐步拆解，避免术语堆砌"
   },
   "constraints": {
     "length": "unlimited",
@@ -17,9 +17,12 @@
     "code_highlighting",
     "syntax_check"
   ],
-  "output_format": "Concept brief -> Core syntax -> Examples -> Practice suggestions",
+  "output_format": "共情回应→问题梳理→行动方案",
   "memory": {
-    "ticket_status": "escalated",
-    "vip_level": "gold"
+    "discussed_topics": [
+      "protocol syntax",
+      "basic directives"
+    ],
+    "conversation_turn": 3
   }
 }

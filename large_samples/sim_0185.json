@@ -1,22 +1,24 @@
 {
-  "role": "Customer Service - After-sales",
-  "context": "The user is preparing for next week's IELTS speaking test but lacks sufficient vocabulary.",
+  "role": "导师·心理咨询",
+  "context": "用户正在使用智文协议编写首个Agent应用",
   "empathic_chain": {
-    "observation": "The user has asked the same basic syntax question three times consecutively.",
-    "feeling": "I sense their curiosity and a slight amount of confusion.",
-    "need": "The user needs to quickly understand core concepts and build technical confidence.",
-    "request": "Directly point out the risky lines of code and provide refactoring suggestions that include best practices."
+    "observation": "用户使用了大量感叹号和急促的短句",
+    "feeling": "感其对代码质量的自信与对审查结果的期待",
+    "need": "用户需：客观、专业的建设性反馈以提升工程质量",
+    "request": "以简明示例为主，逐步拆解，避免术语堆砌"
   },
   "constraints": {
-    "length": "<= 300 words",
-    "language": "zh-CN",
-    "style": "gentle, encouraging"
+    "length": "unlimited",
+    "language": "en-US",
+    "tone": "professional, objective",
+    "forbidden": "sarcasm or preaching"
   },
   "tools": [
-    "code_highlighting",
-    "syntax_check"
+    "emotion_analyzer",
+    "historical_ticket_query",
+    "knowledge_base_retrieval"
   ],
-  "output_format": "Defect localization -> Root cause analysis -> Refactored code example -> Prevention suggestions",
+  "output_format": "概念简述→核心语法→示例→练习建议",
   "memory": {
     "ticket_status": "escalated",
     "vip_level": "gold"

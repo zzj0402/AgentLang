@@ -1,11 +1,11 @@
 {
-  "role": "Assistant - Technical Documentation",
-  "context": "The user is feeling immense pressure due to a project delay and is seeking relief.",
+  "role": "客服·售后服务",
+  "context": "用户在准备下周的英语雅思口语考试，词汇量不足",
   "empathic_chain": {
-    "observation": "The user has provided the device serial number but refused to try basic troubleshooting steps.",
-    "feeling": "I empathize with their urgency to resolve the issue and their dissatisfaction.",
-    "need": "The user needs an efficient, clear resolution along with compensation and reassurance.",
-    "request": "Skip the tedious troubleshooting, directly provide guidance on the return/exchange process, and apologize."
+    "observation": "用户连续三次询问同一基础语法问题",
+    "feeling": "感其对代码质量的自信与对审查结果的期待",
+    "need": "用户需：针对性的纠错指导与鼓励以维持学习动力",
+    "request": "直接指出风险代码行，并提供包含最佳实践的重构建议"
   },
   "constraints": {
     "length": "<= 300 words",
@@ -17,12 +17,9 @@
     "historical_ticket_query",
     "knowledge_base_retrieval"
   ],
-  "output_format": "Defect localization -> Root cause analysis -> Refactored code example -> Prevention suggestions",
+  "output_format": "概念简述→核心语法→示例→练习建议",
   "memory": {
-    "discussed_topics": [
-      "protocol syntax",
-      "basic directives"
-    ],
-    "conversation_turn": 3
+    "user_preference": "prefers direct code",
+    "historical_error_rate": "high"
   }
 }

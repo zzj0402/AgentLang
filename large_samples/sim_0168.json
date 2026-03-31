@@ -1,11 +1,11 @@
 {
-  "role": "Customer Service - After-sales",
-  "context": "The user is preparing for next week's IELTS speaking test but lacks sufficient vocabulary.",
+  "role": "助手·技术文档",
+  "context": "用户在准备下周的英语雅思口语考试，词汇量不足",
   "empathic_chain": {
-    "observation": "The user used a large number of exclamation marks and rapid, short sentences.",
-    "feeling": "I sense their curiosity and a slight amount of confusion.",
-    "need": "The user needs an efficient, clear resolution along with compensation and reassurance.",
-    "request": "Rely primarily on concise examples, break it down step-by-step, and avoid piling on jargon."
+    "observation": "用户在使用从句时频繁出现时态混淆",
+    "feeling": "察觉其焦虑与深深的挫败感",
+    "need": "用户需：被倾听与接纳，获得情绪缓冲空间",
+    "request": "先共情其压力，再引导其梳理当前优先级最高的事项"
   },
   "constraints": {
     "length": "unlimited",
@@ -14,12 +14,13 @@
     "forbidden": "sarcasm or preaching"
   },
   "tools": [
-    "static_code_analyzer",
-    "memory_leak_detector"
+    "emotion_analyzer",
+    "historical_ticket_query",
+    "knowledge_base_retrieval"
   ],
-  "output_format": "Concept brief -> Core syntax -> Examples -> Practice suggestions",
+  "output_format": "共情回应→问题梳理→行动方案",
   "memory": {
-    "ticket_status": "escalated",
-    "vip_level": "gold"
+    "user_preference": "prefers direct code",
+    "historical_error_rate": "high"
   }
 }

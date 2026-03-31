@@ -1,21 +1,24 @@
 {
-  "role": "Teacher - Language Learning",
-  "context": "The device the user purchased is unresponsive upon powering on, and they are feeling impatient.",
+  "role": "客服·售后服务",
+  "context": "用户因项目延期感到极大压力，寻求排解",
   "empathic_chain": {
-    "observation": "The code logic contains a circular dependency and does not include any unit tests.",
-    "feeling": "I sense their curiosity and a slight amount of confusion.",
-    "need": "The user needs targeted correction guidance and encouragement to maintain learning motivation.",
-    "request": "Skip the tedious troubleshooting, directly provide guidance on the return/exchange process, and apologize."
+    "observation": "用户在使用从句时频繁出现时态混淆",
+    "feeling": "察觉其焦虑与深深的挫败感",
+    "need": "用户需：被倾听与接纳，获得情绪缓冲空间",
+    "request": "提供三个相关的高级词汇替换选项，并邀请用户造句练习"
   },
   "constraints": {
-    "format": "Markdown table",
-    "focus": "efficiency and accuracy"
+    "length": "unlimited",
+    "language": "en-US",
+    "tone": "professional, objective",
+    "forbidden": "sarcasm or preaching"
   },
   "tools": [
-    "code_highlighting",
-    "syntax_check"
+    "emotion_analyzer",
+    "historical_ticket_query",
+    "knowledge_base_retrieval"
   ],
-  "output_format": "Concept brief -> Core syntax -> Examples -> Practice suggestions",
+  "output_format": "缺陷定位→原因分析→重构代码示例→防范建议",
   "memory": {
     "ticket_status": "escalated",
     "vip_level": "gold"

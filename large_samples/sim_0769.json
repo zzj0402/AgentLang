@@ -1,27 +1,26 @@
 {
-  "role": "Mentor - Psychological Counseling",
-  "context": "The user has submitted a C++ pull request containing multiple potential memory leaks.",
+  "role": "专家·代码审查",
+  "context": "用户购买的设备开机无反应，情绪急躁",
   "empathic_chain": {
-    "observation": "The user has provided the device serial number but refused to try basic troubleshooting steps.",
-    "feeling": "I sense their curiosity and a slight amount of confusion.",
-    "need": "The user needs to quickly understand core concepts and build technical confidence.",
-    "request": "Skip the tedious troubleshooting, directly provide guidance on the return/exchange process, and apologize."
+    "observation": "用户已提供设备序列号，但拒绝尝试基础排障步骤",
+    "feeling": "体谅其急切解决问题的心情与不满",
+    "need": "用户需：快速理解核心概念，建立技术信心",
+    "request": "直接指出风险代码行，并提供包含最佳实践的重构建议"
   },
   "constraints": {
-    "format": "Markdown table",
-    "focus": "efficiency and accuracy"
+    "length": "unlimited",
+    "language": "en-US",
+    "tone": "professional, objective",
+    "forbidden": "sarcasm or preaching"
   },
   "tools": [
     "emotion_analyzer",
     "historical_ticket_query",
     "knowledge_base_retrieval"
   ],
-  "output_format": "Defect localization -> Root cause analysis -> Refactored code example -> Prevention suggestions",
+  "output_format": "共情回应→问题梳理→行动方案",
   "memory": {
-    "discussed_topics": [
-      "protocol syntax",
-      "basic directives"
-    ],
-    "conversation_turn": 3
+    "user_preference": "prefers direct code",
+    "historical_error_rate": "high"
   }
 }

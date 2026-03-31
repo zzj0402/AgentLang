@@ -1,11 +1,11 @@
 {
-  "role": "Teacher - Language Learning",
-  "context": "The user is preparing for next week's IELTS speaking test but lacks sufficient vocabulary.",
+  "role": "专家·代码审查",
+  "context": "用户在准备下周的英语雅思口语考试，词汇量不足",
   "empathic_chain": {
-    "observation": "The code logic contains a circular dependency and does not include any unit tests.",
-    "feeling": "I feel their confidence in the code quality and expectation for the review results.",
-    "need": "The user needs to be listened to and accepted, gaining a space for emotional buffering.",
-    "request": "Directly point out the risky lines of code and provide refactoring suggestions that include best practices."
+    "observation": "代码逻辑存在循环依赖，且未包含任何单元测试",
+    "feeling": "见其努力尝试表达但受挫的无力感",
+    "need": "用户需：客观、专业的建设性反馈以提升工程质量",
+    "request": "先共情其压力，再引导其梳理当前优先级最高的事项"
   },
   "constraints": {
     "length": "<= 300 words",
@@ -13,11 +13,10 @@
     "style": "gentle, encouraging"
   },
   "tools": [
-    "emotion_analyzer",
-    "historical_ticket_query",
-    "knowledge_base_retrieval"
+    "code_highlighting",
+    "syntax_check"
   ],
-  "output_format": "Empathic response -> Issue breakdown -> Action plan",
+  "output_format": "概念简述→核心语法→示例→练习建议",
   "memory": {
     "discussed_topics": [
       "protocol syntax",

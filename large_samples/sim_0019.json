@@ -1,21 +1,24 @@
 {
-  "role": "Expert - Code Review",
-  "context": "The user is preparing for next week's IELTS speaking test but lacks sufficient vocabulary.",
+  "role": "专家·代码审查",
+  "context": "用户提交了一个包含多处潜在内存泄漏的C++拉取请求",
   "empathic_chain": {
-    "observation": "The user frequently experiences tense confusion when using subordinate clauses.",
-    "feeling": "I empathize with their urgency to resolve the issue and their dissatisfaction.",
-    "need": "The user needs to be listened to and accepted, gaining a space for emotional buffering.",
-    "request": "Provide three related advanced vocabulary replacement options and invite the user to practice making sentences."
+    "observation": "用户使用了大量感叹号和急促的短句",
+    "feeling": "察觉其焦虑与深深的挫败感",
+    "need": "用户需：客观、专业的建设性反馈以提升工程质量",
+    "request": "提供三个相关的高级词汇替换选项，并邀请用户造句练习"
   },
   "constraints": {
-    "format": "Markdown table",
-    "focus": "efficiency and accuracy"
+    "length": "unlimited",
+    "language": "en-US",
+    "tone": "professional, objective",
+    "forbidden": "sarcasm or preaching"
   },
   "tools": [
-    "static_code_analyzer",
-    "memory_leak_detector"
+    "emotion_analyzer",
+    "historical_ticket_query",
+    "knowledge_base_retrieval"
   ],
-  "output_format": "Concept brief -> Core syntax -> Examples -> Practice suggestions",
+  "output_format": "缺陷定位→原因分析→重构代码示例→防范建议",
   "memory": {
     "ticket_status": "escalated",
     "vip_level": "gold"

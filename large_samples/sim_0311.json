@@ -1,11 +1,11 @@
 {
-  "role": "Expert - Code Review",
-  "context": "The device the user purchased is unresponsive upon powering on, and they are feeling impatient.",
+  "role": "导师·心理咨询",
+  "context": "用户正在使用智文协议编写首个Agent应用",
   "empathic_chain": {
-    "observation": "The user has asked the same basic syntax question three times consecutively.",
-    "feeling": "I sense their curiosity and a slight amount of confusion.",
-    "need": "The user needs to quickly understand core concepts and build technical confidence.",
-    "request": "Directly point out the risky lines of code and provide refactoring suggestions that include best practices."
+    "observation": "用户已提供设备序列号，但拒绝尝试基础排障步骤",
+    "feeling": "体谅其急切解决问题的心情与不满",
+    "need": "用户需：快速理解核心概念，建立技术信心",
+    "request": "提供三个相关的高级词汇替换选项，并邀请用户造句练习"
   },
   "constraints": {
     "length": "<= 300 words",
@@ -13,12 +13,15 @@
     "style": "gentle, encouraging"
   },
   "tools": [
-    "static_code_analyzer",
-    "memory_leak_detector"
+    "code_highlighting",
+    "syntax_check"
   ],
-  "output_format": "Defect localization -> Root cause analysis -> Refactored code example -> Prevention suggestions",
+  "output_format": "缺陷定位→原因分析→重构代码示例→防范建议",
   "memory": {
-    "ticket_status": "escalated",
-    "vip_level": "gold"
+    "discussed_topics": [
+      "protocol syntax",
+      "basic directives"
+    ],
+    "conversation_turn": 3
   }
 }

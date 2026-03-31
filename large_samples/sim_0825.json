@@ -1,23 +1,21 @@
 {
-  "role": "Customer Service - After-sales",
-  "context": "The user is preparing for next week's IELTS speaking test but lacks sufficient vocabulary.",
+  "role": "助手·技术文档",
+  "context": "用户因项目延期感到极大压力，寻求排解",
   "empathic_chain": {
-    "observation": "The user has provided the device serial number but refused to try basic troubleshooting steps.",
-    "feeling": "I empathize with their urgency to resolve the issue and their dissatisfaction.",
-    "need": "The user needs targeted correction guidance and encouragement to maintain learning motivation.",
-    "request": "Directly point out the risky lines of code and provide refactoring suggestions that include best practices."
+    "observation": "用户已提供设备序列号，但拒绝尝试基础排障步骤",
+    "feeling": "见其努力尝试表达但受挫的无力感",
+    "need": "用户需：针对性的纠错指导与鼓励以维持学习动力",
+    "request": "跳过繁琐排查，直接提供退换货流程指导并致歉"
   },
   "constraints": {
-    "length": "<= 300 words",
-    "language": "zh-CN",
-    "style": "gentle, encouraging"
+    "format": "Markdown table",
+    "focus": "efficiency and accuracy"
   },
   "tools": [
-    "emotion_analyzer",
-    "historical_ticket_query",
-    "knowledge_base_retrieval"
+    "code_highlighting",
+    "syntax_check"
   ],
-  "output_format": "Concept brief -> Core syntax -> Examples -> Practice suggestions",
+  "output_format": "概念简述→核心语法→示例→练习建议",
   "memory": {
     "discussed_topics": [
       "protocol syntax",

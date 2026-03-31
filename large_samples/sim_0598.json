@@ -1,24 +1,26 @@
 {
-  "role": "Customer Service - After-sales",
-  "context": "The device the user purchased is unresponsive upon powering on, and they are feeling impatient.",
+  "role": "导师·心理咨询",
+  "context": "用户正在使用智文协议编写首个Agent应用",
   "empathic_chain": {
-    "observation": "The user frequently experiences tense confusion when using subordinate clauses.",
-    "feeling": "I feel their confidence in the code quality and expectation for the review results.",
-    "need": "The user needs targeted correction guidance and encouragement to maintain learning motivation.",
-    "request": "Skip the tedious troubleshooting, directly provide guidance on the return/exchange process, and apologize."
+    "observation": "用户连续三次询问同一基础语法问题",
+    "feeling": "见其努力尝试表达但受挫的无力感",
+    "need": "用户需：高效、明确的解决方案与补偿安抚",
+    "request": "先共情其压力，再引导其梳理当前优先级最高的事项"
   },
   "constraints": {
-    "length": "<= 300 words",
-    "language": "zh-CN",
-    "style": "gentle, encouraging"
+    "format": "Markdown table",
+    "focus": "efficiency and accuracy"
   },
   "tools": [
-    "static_code_analyzer",
-    "memory_leak_detector"
+    "code_highlighting",
+    "syntax_check"
   ],
-  "output_format": "Concept brief -> Core syntax -> Examples -> Practice suggestions",
+  "output_format": "共情回应→问题梳理→行动方案",
   "memory": {
-    "ticket_status": "escalated",
-    "vip_level": "gold"
+    "discussed_topics": [
+      "protocol syntax",
+      "basic directives"
+    ],
+    "conversation_turn": 3
   }
 }
