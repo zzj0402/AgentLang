@@ -4,7 +4,7 @@ import random
 import argparse
 from pathlib import Path
 
-# Data dictionary for generation
+# Base dictionaries for generation
 DATA = {
     "roles": [
         {"zw": "助手·技术文档", "en": "Assistant - Technical Documentation"},
@@ -48,34 +48,6 @@ DATA = {
         {"zw": "跳过繁琐排查，直接提供退换货流程指导并致歉", "en": "Skip the tedious troubleshooting, directly provide guidance on the return/exchange process, and apologize."},
         {"zw": "提供三个相关的高级词汇替换选项，并邀请用户造句练习", "en": "Provide three related advanced vocabulary replacement options and invite the user to practice making sentences."}
     ],
-    "constraints": [
-        (
-            "  长度: ≤300字\n  语言: zh-CN\n  风格: 温和、鼓励",
-            {"length": "<= 300 words", "language": "zh-CN", "style": "gentle, encouraging"}
-        ),
-        (
-            "  长度: 不限\n  语言: en-US\n  语气: 专业、客观\n  禁止: 讽刺或说教",
-            {"length": "unlimited", "language": "en-US", "tone": "professional, objective", "forbidden": "sarcasm or preaching"}
-        ),
-        (
-            "  格式: Markdown表格\n  侧重点: 效率与准确性",
-            {"format": "Markdown table", "focus": "efficiency and accuracy"}
-        )
-    ],
-    "tools": [
-        (
-            "[代码高亮, 语法检查]",
-            ["code_highlighting", "syntax_check"]
-        ),
-        (
-            "[情绪分析仪, 历史工单查询, 知识库检索]",
-            ["emotion_analyzer", "historical_ticket_query", "knowledge_base_retrieval"]
-        ),
-        (
-            "[静态代码分析工具, 内存泄漏检测器]",
-            ["static_code_analyzer", "memory_leak_detector"]
-        )
-    ],
     "outputs": [
         (
             "概念简述→核心语法→示例→练习建议",
@@ -89,38 +61,154 @@ DATA = {
             "缺陷定位→原因分析→重构代码示例→防范建议",
             "Defect localization -> Root cause analysis -> Refactored code example -> Prevention suggestions"
         )
-    ],
-    "memories": [
-        (
-            "  已讨论主题: [协议语法, 基本指令]\n  会话轮次: 3",
-            {"discussed_topics": ["protocol syntax", "basic directives"], "conversation_turn": 3}
-        ),
-        (
-            "  用户偏好: 喜欢直接给代码\n  历史错误率: 较高",
-            {"user_preference": "prefers direct code", "historical_error_rate": "high"}
-        ),
-        (
-            "  工单状态: 已升级\n  VIP等级: 黄金",
-            {"ticket_status": "escalated", "vip_level": "gold"}
-        )
     ]
 }
 
+def generate_massive_pair(index, out_dir):
+    """Generates a massive .zw and .json file pair to simulate extreme architectural complexity."""
+
+    # 1. Base components
+    r_idx = random.randint(0, len(DATA["roles"])-1)
+
+    # Generate 50 context paragraphs
+    contexts_zw = [DATA["contexts"][random.randint(0, len(DATA["contexts"])-1)]["zw"] for _ in range(50)]
+    contexts_en = [DATA["contexts"][random.randint(0, len(DATA["contexts"])-1)]["en"] for _ in range(50)]
+
+    # 5 observations
+    obs_zw = "；".join([DATA["observations"][random.randint(0, len(DATA["observations"])-1)]["zw"] for _ in range(5)])
+    obs_en = "; ".join([DATA["observations"][random.randint(0, len(DATA["observations"])-1)]["en"] for _ in range(5)])
+
+    # 1 feeling, need, request
+    f_idx = random.randint(0, len(DATA["feelings"])-1)
+    n_idx = random.randint(0, len(DATA["needs"])-1)
+    req_idx = random.randint(0, len(DATA["requests"])-1)
+
+    # 100 Constraints
+    constraints_zw = ""
+    constraints_json = {}
+    for i in range(100):
+        key_zw = f"规则{i}"
+        key_en = f"rule_{i}"
+        val_zw = f"必须遵循第{i}项企业标准，且严禁违规操作。"
+        val_en = f"Must follow enterprise standard number {i}, and violating operations are strictly prohibited."
+        constraints_zw += f"  {key_zw}: {val_zw}\n"
+        constraints_json[key_en] = val_en
+
+    # 50 Tools with descriptions
+    tools_zw = ""
+    tools_json = {}
+    for i in range(50):
+        t_name_zw = f"工具{i}"
+        t_name_en = f"tool_{i}"
+        t_desc_zw = f"用于处理模块{i}的数据并返回分析结果。"
+        t_desc_en = f"Used to process data from module {i} and return analysis results."
+        tools_zw += f"  {t_name_zw}: {t_desc_zw}\n"
+        tools_json[t_name_en] = t_desc_en
+
+    # 1 Output
+    out_idx = random.randint(0, len(DATA["outputs"])-1)
+
+    # 50 Memory items
+    memory_zw = ""
+    memory_json = {}
+    for i in range(50):
+        m_key_zw = f"会话历史{i}"
+        m_key_en = f"session_history_{i}"
+        m_val_zw = f"用户在时间戳{i}000提及了问题点。"
+        m_val_en = f"The user mentioned the pain point at timestamp {i}000."
+        memory_zw += f"  {m_key_zw}: {m_val_zw}\n"
+        memory_json[m_key_en] = m_val_en
+
+    # Build .zw content
+    zw_content = f"""#角色 {DATA['roles'][r_idx]['zw']}
+
+#上下文
+{"".join([f"  {c}\n" for c in contexts_zw])}
+
+#观 {obs_zw}
+#感 {DATA['feelings'][f_idx]['zw']}
+#需 {DATA['needs'][n_idx]['zw']}
+#请 {DATA['requests'][req_idx]['zw']}
+
+#约束 {{
+{constraints_zw}}}
+
+#工具 {{
+{tools_zw}}}
+
+#输出 {DATA['outputs'][out_idx][0]}
+
+#记忆 {{
+{memory_zw}}}
+"""
+
+    # Build .json content (Using Chinese Content to isolate Structural vs Semantic token density)
+    json_obj = {
+        "role": DATA["roles"][r_idx]["zw"],
+        "context": contexts_zw,
+        "empathic_chain": {
+            "observation": obs_zw,
+            "feeling": DATA["feelings"][f_idx]["zw"],
+            "need": DATA["needs"][n_idx]["zw"],
+            "request": DATA["requests"][req_idx]["zw"]
+        },
+        "constraints": {k: v.replace(k+": ", "").strip() for k, v in [line.split(":", 1) for line in constraints_zw.strip().split("\n") if ":" in line]},
+        "tools": {k: v.replace(k+": ", "").strip() for k, v in [line.split(":", 1) for line in tools_zw.strip().split("\n") if ":" in line]},
+        "output_format": DATA["outputs"][out_idx][0],
+        "memory": {k: v.replace(k+": ", "").strip() for k, v in [line.split(":", 1) for line in memory_zw.strip().split("\n") if ":" in line]}
+    }
+    json_content = json.dumps(json_obj, indent=2, ensure_ascii=False)
+
+    # Write files
+    base_name = f"massive_{index:04d}"
+    zw_path = out_dir / f"{base_name}.zw"
+    json_path = out_dir / f"{base_name}.json"
+
+    with open(zw_path, "w", encoding="utf-8") as f:
+        f.write(zw_content)
+
+    with open(json_path, "w", encoding="utf-8") as f:
+        f.write(json_content)
+
+
 def generate_pair(index, out_dir):
-    """Generates a random matched .zw and .json file pair."""
-    # Select random indices for each category
+    """Generates a standard random matched .zw and .json file pair."""
     r_idx = random.randint(0, len(DATA["roles"])-1)
     c_idx = random.randint(0, len(DATA["contexts"])-1)
     o_idx = random.randint(0, len(DATA["observations"])-1)
     f_idx = random.randint(0, len(DATA["feelings"])-1)
     n_idx = random.randint(0, len(DATA["needs"])-1)
     req_idx = random.randint(0, len(DATA["requests"])-1)
-    con_idx = random.randint(0, len(DATA["constraints"])-1)
-    t_idx = random.randint(0, len(DATA["tools"])-1)
-    out_idx = random.randint(0, len(DATA["outputs"])-1)
-    m_idx = random.randint(0, len(DATA["memories"])-1)
 
-    # Build .zw content
+    con_zw, con_json = [
+        (
+            "  长度: ≤300字\n  语言: zh-CN\n  风格: 温和、鼓励",
+            {"length": "<= 300 words", "language": "zh-CN", "style": "gentle, encouraging"}
+        ),
+        (
+            "  长度: 不限\n  语言: en-US\n  语气: 专业、客观\n  禁止: 讽刺或说教",
+            {"length": "unlimited", "language": "en-US", "tone": "professional, objective", "forbidden": "sarcasm or preaching"}
+        ),
+        (
+            "  格式: Markdown表格\n  侧重点: 效率与准确性",
+            {"format": "Markdown table", "focus": "efficiency and accuracy"}
+        )
+    ][random.randint(0, 2)]
+
+    t_zw, t_json = [
+        ("[代码高亮, 语法检查]", ["code_highlighting", "syntax_check"]),
+        ("[情绪分析仪, 历史工单查询, 知识库检索]", ["emotion_analyzer", "historical_ticket_query", "knowledge_base_retrieval"]),
+        ("[静态代码分析工具, 内存泄漏检测器]", ["static_code_analyzer", "memory_leak_detector"])
+    ][random.randint(0, 2)]
+
+    out_idx = random.randint(0, len(DATA["outputs"])-1)
+
+    m_zw, m_json = [
+        ("  已讨论主题: [协议语法, 基本指令]\n  会话轮次: 3", {"discussed_topics": ["protocol syntax", "basic directives"], "conversation_turn": 3}),
+        ("  用户偏好: 喜欢直接给代码\n  历史错误率: 较高", {"user_preference": "prefers direct code", "historical_error_rate": "high"}),
+        ("  工单状态: 已升级\n  VIP等级: 黄金", {"ticket_status": "escalated", "vip_level": "gold"})
+    ][random.randint(0, 2)]
+
     zw_content = f"""#角色 {DATA['roles'][r_idx]['zw']}
 
 #上下文 {DATA['contexts'][c_idx]['zw']}
@@ -131,19 +219,17 @@ def generate_pair(index, out_dir):
 #请 {DATA['requests'][req_idx]['zw']}
 
 #约束 {{
-{DATA['constraints'][con_idx][0]}
+{con_zw}
 }}
 
-#工具 {DATA['tools'][t_idx][0]}
+#工具 {t_zw}
 
 #输出 {DATA['outputs'][out_idx][0]}
 
 #记忆 {{
-{DATA['memories'][m_idx][0]}
+{m_zw}
 }}
 """
-
-    # Build .json content
     json_obj = {
         "role": DATA["roles"][r_idx]["en"],
         "context": DATA["contexts"][c_idx]["en"],
@@ -153,36 +239,35 @@ def generate_pair(index, out_dir):
             "need": DATA["needs"][n_idx]["en"],
             "request": DATA["requests"][req_idx]["en"]
         },
-        "constraints": DATA["constraints"][con_idx][1],
-        "tools": DATA["tools"][t_idx][1],
+        "constraints": con_json,
+        "tools": t_json,
         "output_format": DATA["outputs"][out_idx][1],
-        "memory": DATA["memories"][m_idx][1]
+        "memory": m_json
     }
     json_content = json.dumps(json_obj, indent=2, ensure_ascii=False)
 
-    # Write files
     base_name = f"sim_{index:04d}"
-    zw_path = out_dir / f"{base_name}.zw"
-    json_path = out_dir / f"{base_name}.json"
-
-    with open(zw_path, "w", encoding="utf-8") as f:
+    with open(out_dir / f"{base_name}.zw", "w", encoding="utf-8") as f:
         f.write(zw_content)
-
-    with open(json_path, "w", encoding="utf-8") as f:
+    with open(out_dir / f"{base_name}.json", "w", encoding="utf-8") as f:
         f.write(json_content)
 
 def main():
     parser = argparse.ArgumentParser(description="Generate large-scale ZhiWen dataset")
     parser.add_argument("count", type=int, help="Number of file pairs to generate")
     parser.add_argument("--out", default="large_samples", help="Output directory")
+    parser.add_argument("--massive", action="store_true", help="Generate massive architectural complexity samples")
     args = parser.parse_args()
 
     out_dir = Path(args.out)
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    print(f"Generating {args.count} file pairs in '{args.out}/'...")
+    print(f"Generating {args.count} file pairs in '{args.out}/' (Massive: {args.massive})...")
     for i in range(args.count):
-        generate_pair(i, out_dir)
+        if args.massive:
+            generate_massive_pair(i, out_dir)
+        else:
+            generate_pair(i, out_dir)
     print("Done.")
 
 if __name__ == "__main__":
