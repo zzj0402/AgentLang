@@ -1,0 +1,27 @@
+{
+  "role": "Assistant - Technical Documentation",
+  "context": "The user is preparing for next week's IELTS speaking test but lacks sufficient vocabulary.",
+  "empathic_chain": {
+    "observation": "The user used a large number of exclamation marks and rapid, short sentences.",
+    "feeling": "I feel their confidence in the code quality and expectation for the review results.",
+    "need": "The user needs to quickly understand core concepts and build technical confidence.",
+    "request": "Directly point out the risky lines of code and provide refactoring suggestions that include best practices."
+  },
+  "constraints": {
+    "length": "<= 300 words",
+    "language": "zh-CN",
+    "style": "gentle, encouraging"
+  },
+  "tools": [
+    "code_highlighting",
+    "syntax_check"
+  ],
+  "output_format": "Empathic response -> Issue breakdown -> Action plan",
+  "memory": {
+    "discussed_topics": [
+      "protocol syntax",
+      "basic directives"
+    ],
+    "conversation_turn": 3
+  }
+}

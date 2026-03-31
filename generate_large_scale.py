@@ -277,6 +277,9 @@ def generate_pair(index, out_dir):
         f.write(json_content)
 
 def main():
+    # Set seed for reproducible benchmark datasets
+    random.seed(42)
+
     parser = argparse.ArgumentParser(description="Generate large-scale ZhiWen dataset")
     parser.add_argument("count", type=int, help="Number of file pairs to generate")
     parser.add_argument("--out", default="large_samples", help="Output directory")

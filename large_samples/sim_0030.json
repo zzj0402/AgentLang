@@ -1,0 +1,26 @@
+{
+  "role": "Assistant - Technical Documentation",
+  "context": "The user has submitted a C++ pull request containing multiple potential memory leaks.",
+  "empathic_chain": {
+    "observation": "The user has asked the same basic syntax question three times consecutively.",
+    "feeling": "I sense their curiosity and a slight amount of confusion.",
+    "need": "The user needs targeted correction guidance and encouragement to maintain learning motivation.",
+    "request": "Skip the tedious troubleshooting, directly provide guidance on the return/exchange process, and apologize."
+  },
+  "constraints": {
+    "format": "Markdown table",
+    "focus": "efficiency and accuracy"
+  },
+  "tools": [
+    "static_code_analyzer",
+    "memory_leak_detector"
+  ],
+  "output_format": "Concept brief -> Core syntax -> Examples -> Practice suggestions",
+  "memory": {
+    "discussed_topics": [
+      "protocol syntax",
+      "basic directives"
+    ],
+    "conversation_turn": 3
+  }
+}

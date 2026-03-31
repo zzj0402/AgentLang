@@ -1,0 +1,26 @@
+{
+  "role": "Customer Service - After-sales",
+  "context": "The user has submitted a C++ pull request containing multiple potential memory leaks.",
+  "empathic_chain": {
+    "observation": "The user has asked the same basic syntax question three times consecutively.",
+    "feeling": "I feel their confidence in the code quality and expectation for the review results.",
+    "need": "The user needs objective, professional constructive feedback to improve engineering quality.",
+    "request": "Provide three related advanced vocabulary replacement options and invite the user to practice making sentences."
+  },
+  "constraints": {
+    "format": "Markdown table",
+    "focus": "efficiency and accuracy"
+  },
+  "tools": [
+    "code_highlighting",
+    "syntax_check"
+  ],
+  "output_format": "Defect localization -> Root cause analysis -> Refactored code example -> Prevention suggestions",
+  "memory": {
+    "discussed_topics": [
+      "protocol syntax",
+      "basic directives"
+    ],
+    "conversation_turn": 3
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "role": "Customer Service - After-sales",
+  "context": "The user has submitted a C++ pull request containing multiple potential memory leaks.",
+  "empathic_chain": {
+    "observation": "The user used a large number of exclamation marks and rapid, short sentences.",
+    "feeling": "I observe their sense of powerlessness in trying hard to express themselves but feeling thwarted.",
+    "need": "The user needs an efficient, clear resolution along with compensation and reassurance.",
+    "request": "Skip the tedious troubleshooting, directly provide guidance on the return/exchange process, and apologize."
+  },
+  "constraints": {
+    "length": "<= 300 words",
+    "language": "zh-CN",
+    "style": "gentle, encouraging"
+  },
+  "tools": [
+    "emotion_analyzer",
+    "historical_ticket_query",
+    "knowledge_base_retrieval"
+  ],
+  "output_format": "Empathic response -> Issue breakdown -> Action plan",
+  "memory": {
+    "user_preference": "prefers direct code",
+    "historical_error_rate": "high"
+  }
+}

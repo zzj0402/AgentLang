@@ -1,0 +1,23 @@
+{
+  "role": "Assistant - Technical Documentation",
+  "context": "The user has submitted a C++ pull request containing multiple potential memory leaks.",
+  "empathic_chain": {
+    "observation": "The code logic contains a circular dependency and does not include any unit tests.",
+    "feeling": "I detect their anxiety and deep sense of frustration.",
+    "need": "The user needs objective, professional constructive feedback to improve engineering quality.",
+    "request": "Skip the tedious troubleshooting, directly provide guidance on the return/exchange process, and apologize."
+  },
+  "constraints": {
+    "format": "Markdown table",
+    "focus": "efficiency and accuracy"
+  },
+  "tools": [
+    "code_highlighting",
+    "syntax_check"
+  ],
+  "output_format": "Defect localization -> Root cause analysis -> Refactored code example -> Prevention suggestions",
+  "memory": {
+    "user_preference": "prefers direct code",
+    "historical_error_rate": "high"
+  }
+}

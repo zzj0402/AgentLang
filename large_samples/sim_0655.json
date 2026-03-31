@@ -1,0 +1,24 @@
+{
+  "role": "Customer Service - After-sales",
+  "context": "The user is writing their first Agent application using the ZhiWen protocol.",
+  "empathic_chain": {
+    "observation": "The code logic contains a circular dependency and does not include any unit tests.",
+    "feeling": "I feel their confidence in the code quality and expectation for the review results.",
+    "need": "The user needs to be listened to and accepted, gaining a space for emotional buffering.",
+    "request": "Rely primarily on concise examples, break it down step-by-step, and avoid piling on jargon."
+  },
+  "constraints": {
+    "length": "<= 300 words",
+    "language": "zh-CN",
+    "style": "gentle, encouraging"
+  },
+  "tools": [
+    "code_highlighting",
+    "syntax_check"
+  ],
+  "output_format": "Defect localization -> Root cause analysis -> Refactored code example -> Prevention suggestions",
+  "memory": {
+    "user_preference": "prefers direct code",
+    "historical_error_rate": "high"
+  }
+}

@@ -98,6 +98,24 @@ Like the structural test, the identical underlying Chinese conversation strings 
 
 **Insight**: The `JSON` syntax for logging conversation history is exceptionally heavy (repeated keys, strings, braces, and arrays). The 智文 protocol simply prepends the agent's name to the message block. By switching to the dense `.zw` format for massive inter-agent communication, developers immediately recover over **27% of their context window**.
 
+### Token Cruncher Results: 999-Round Inter-Agent Communication (Large Prompts)
+
+To further isolate the effect of the ZhiWen protocol, a massive 999-round back-and-forth communication test was performed between two agents. Each round utilized a large, analytical prompt.
+
+This benchmark compared three formats:
+1. `ZhiWen (.zw)`: Dense format using Simplified Chinese text.
+2. `JSON (.json) [Simplified Chinese]`: Verbose JSON format using the exact same Simplified Chinese text.
+3. `JSON (.json) [English]`: Verbose JSON format using the English translation of the text.
+
+*   **ZhiWen Tokens (cl100k_base)**: 185,364
+*   **JSON [Simplified Chinese] Tokens (cl100k_base)**: 198,357
+*   **JSON [English] Tokens (cl100k_base)**: 126,912
+
+**Insights**:
+*   **Structural Overhead Reduction (Chinese JSON -> ZhiWen)**: **6.55%**. The structural token savings (removing JSON boilerplate in favor of dense markdown) remain steady at around ~6-7% even at extreme lengths.
+*   **Linguistic Bias Penalty (English JSON -> Chinese JSON)**: **56.29%**. Chinese JSON uses significantly more tokens than English JSON. The massive linguistic penalty imposed by OpenAI's `cl100k_base` (where Chinese characters take ~56% more tokens than English words) vastly outweighs the structural gains when tested purely on an English-optimized tokenizer.
+*   **Conclusion**: The 50%-80% density reduction claim relies on the structural compression seen here, but must be paired with LLMs utilizing tokenizers optimized for Chinese (like Qwen or DeepSeek) to fully overcome the inherent English bias of `cl100k_base`.
+
 ### Embedding Similarity Results
 
 The embedding benchmark was run across the dataset (a subset of 100 was used for the Universal Sentence Encoder due to execution time constraints).

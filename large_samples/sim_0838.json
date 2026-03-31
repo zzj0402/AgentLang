@@ -1,0 +1,25 @@
+{
+  "role": "Teacher - Language Learning",
+  "context": "The device the user purchased is unresponsive upon powering on, and they are feeling impatient.",
+  "empathic_chain": {
+    "observation": "The code logic contains a circular dependency and does not include any unit tests.",
+    "feeling": "I sense their curiosity and a slight amount of confusion.",
+    "need": "The user needs an efficient, clear resolution along with compensation and reassurance.",
+    "request": "Provide three related advanced vocabulary replacement options and invite the user to practice making sentences."
+  },
+  "constraints": {
+    "length": "<= 300 words",
+    "language": "zh-CN",
+    "style": "gentle, encouraging"
+  },
+  "tools": [
+    "emotion_analyzer",
+    "historical_ticket_query",
+    "knowledge_base_retrieval"
+  ],
+  "output_format": "Empathic response -> Issue breakdown -> Action plan",
+  "memory": {
+    "ticket_status": "escalated",
+    "vip_level": "gold"
+  }
+}

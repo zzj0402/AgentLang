@@ -1,0 +1,28 @@
+{
+  "role": "Expert - Code Review",
+  "context": "The user is preparing for next week's IELTS speaking test but lacks sufficient vocabulary.",
+  "empathic_chain": {
+    "observation": "The code logic contains a circular dependency and does not include any unit tests.",
+    "feeling": "I empathize with their urgency to resolve the issue and their dissatisfaction.",
+    "need": "The user needs an efficient, clear resolution along with compensation and reassurance.",
+    "request": "Skip the tedious troubleshooting, directly provide guidance on the return/exchange process, and apologize."
+  },
+  "constraints": {
+    "length": "<= 300 words",
+    "language": "zh-CN",
+    "style": "gentle, encouraging"
+  },
+  "tools": [
+    "emotion_analyzer",
+    "historical_ticket_query",
+    "knowledge_base_retrieval"
+  ],
+  "output_format": "Defect localization -> Root cause analysis -> Refactored code example -> Prevention suggestions",
+  "memory": {
+    "discussed_topics": [
+      "protocol syntax",
+      "basic directives"
+    ],
+    "conversation_turn": 3
+  }
+}

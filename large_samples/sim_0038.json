@@ -1,0 +1,25 @@
+{
+  "role": "Mentor - Psychological Counseling",
+  "context": "The user has submitted a C++ pull request containing multiple potential memory leaks.",
+  "empathic_chain": {
+    "observation": "The user used a large number of exclamation marks and rapid, short sentences.",
+    "feeling": "I feel their confidence in the code quality and expectation for the review results.",
+    "need": "The user needs targeted correction guidance and encouragement to maintain learning motivation.",
+    "request": "Skip the tedious troubleshooting, directly provide guidance on the return/exchange process, and apologize."
+  },
+  "constraints": {
+    "length": "unlimited",
+    "language": "en-US",
+    "tone": "professional, objective",
+    "forbidden": "sarcasm or preaching"
+  },
+  "tools": [
+    "code_highlighting",
+    "syntax_check"
+  ],
+  "output_format": "Concept brief -> Core syntax -> Examples -> Practice suggestions",
+  "memory": {
+    "ticket_status": "escalated",
+    "vip_level": "gold"
+  }
+}

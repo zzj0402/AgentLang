@@ -1,0 +1,27 @@
+{
+  "role": "Teacher - Language Learning",
+  "context": "The device the user purchased is unresponsive upon powering on, and they are feeling impatient.",
+  "empathic_chain": {
+    "observation": "The user used a large number of exclamation marks and rapid, short sentences.",
+    "feeling": "I detect their anxiety and deep sense of frustration.",
+    "need": "The user needs objective, professional constructive feedback to improve engineering quality.",
+    "request": "Skip the tedious troubleshooting, directly provide guidance on the return/exchange process, and apologize."
+  },
+  "constraints": {
+    "length": "<= 300 words",
+    "language": "zh-CN",
+    "style": "gentle, encouraging"
+  },
+  "tools": [
+    "code_highlighting",
+    "syntax_check"
+  ],
+  "output_format": "Defect localization -> Root cause analysis -> Refactored code example -> Prevention suggestions",
+  "memory": {
+    "discussed_topics": [
+      "protocol syntax",
+      "basic directives"
+    ],
+    "conversation_turn": 3
+  }
+}

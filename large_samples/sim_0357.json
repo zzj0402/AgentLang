@@ -1,0 +1,25 @@
+{
+  "role": "Expert - Code Review",
+  "context": "The user is feeling immense pressure due to a project delay and is seeking relief.",
+  "empathic_chain": {
+    "observation": "The user has asked the same basic syntax question three times consecutively.",
+    "feeling": "I sense their curiosity and a slight amount of confusion.",
+    "need": "The user needs to be listened to and accepted, gaining a space for emotional buffering.",
+    "request": "Rely primarily on concise examples, break it down step-by-step, and avoid piling on jargon."
+  },
+  "constraints": {
+    "length": "<= 300 words",
+    "language": "zh-CN",
+    "style": "gentle, encouraging"
+  },
+  "tools": [
+    "emotion_analyzer",
+    "historical_ticket_query",
+    "knowledge_base_retrieval"
+  ],
+  "output_format": "Empathic response -> Issue breakdown -> Action plan",
+  "memory": {
+    "ticket_status": "escalated",
+    "vip_level": "gold"
+  }
+}

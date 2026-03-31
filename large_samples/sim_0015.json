@@ -1,0 +1,24 @@
+{
+  "role": "Assistant - Technical Documentation",
+  "context": "The user has submitted a C++ pull request containing multiple potential memory leaks.",
+  "empathic_chain": {
+    "observation": "The user frequently experiences tense confusion when using subordinate clauses.",
+    "feeling": "I detect their anxiety and deep sense of frustration.",
+    "need": "The user needs targeted correction guidance and encouragement to maintain learning motivation.",
+    "request": "Rely primarily on concise examples, break it down step-by-step, and avoid piling on jargon."
+  },
+  "constraints": {
+    "format": "Markdown table",
+    "focus": "efficiency and accuracy"
+  },
+  "tools": [
+    "emotion_analyzer",
+    "historical_ticket_query",
+    "knowledge_base_retrieval"
+  ],
+  "output_format": "Defect localization -> Root cause analysis -> Refactored code example -> Prevention suggestions",
+  "memory": {
+    "ticket_status": "escalated",
+    "vip_level": "gold"
+  }
+}

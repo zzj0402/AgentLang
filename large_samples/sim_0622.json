@@ -1,0 +1,25 @@
+{
+  "role": "Assistant - Technical Documentation",
+  "context": "The user is feeling immense pressure due to a project delay and is seeking relief.",
+  "empathic_chain": {
+    "observation": "The user has provided the device serial number but refused to try basic troubleshooting steps.",
+    "feeling": "I feel their confidence in the code quality and expectation for the review results.",
+    "need": "The user needs an efficient, clear resolution along with compensation and reassurance.",
+    "request": "Empathize with their stress first, then guide them to sort out the highest priority tasks currently."
+  },
+  "constraints": {
+    "length": "<= 300 words",
+    "language": "zh-CN",
+    "style": "gentle, encouraging"
+  },
+  "tools": [
+    "emotion_analyzer",
+    "historical_ticket_query",
+    "knowledge_base_retrieval"
+  ],
+  "output_format": "Concept brief -> Core syntax -> Examples -> Practice suggestions",
+  "memory": {
+    "user_preference": "prefers direct code",
+    "historical_error_rate": "high"
+  }
+}

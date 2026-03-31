@@ -1,0 +1,26 @@
+{
+  "role": "Customer Service - After-sales",
+  "context": "The device the user purchased is unresponsive upon powering on, and they are feeling impatient.",
+  "empathic_chain": {
+    "observation": "The user has provided the device serial number but refused to try basic troubleshooting steps.",
+    "feeling": "I observe their sense of powerlessness in trying hard to express themselves but feeling thwarted.",
+    "need": "The user needs an efficient, clear resolution along with compensation and reassurance.",
+    "request": "Rely primarily on concise examples, break it down step-by-step, and avoid piling on jargon."
+  },
+  "constraints": {
+    "format": "Markdown table",
+    "focus": "efficiency and accuracy"
+  },
+  "tools": [
+    "code_highlighting",
+    "syntax_check"
+  ],
+  "output_format": "Defect localization -> Root cause analysis -> Refactored code example -> Prevention suggestions",
+  "memory": {
+    "discussed_topics": [
+      "protocol syntax",
+      "basic directives"
+    ],
+    "conversation_turn": 3
+  }
+}

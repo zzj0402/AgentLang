@@ -1,0 +1,25 @@
+{
+  "role": "Customer Service - After-sales",
+  "context": "The user is feeling immense pressure due to a project delay and is seeking relief.",
+  "empathic_chain": {
+    "observation": "The user has provided the device serial number but refused to try basic troubleshooting steps.",
+    "feeling": "I observe their sense of powerlessness in trying hard to express themselves but feeling thwarted.",
+    "need": "The user needs targeted correction guidance and encouragement to maintain learning motivation.",
+    "request": "Skip the tedious troubleshooting, directly provide guidance on the return/exchange process, and apologize."
+  },
+  "constraints": {
+    "length": "<= 300 words",
+    "language": "zh-CN",
+    "style": "gentle, encouraging"
+  },
+  "tools": [
+    "emotion_analyzer",
+    "historical_ticket_query",
+    "knowledge_base_retrieval"
+  ],
+  "output_format": "Defect localization -> Root cause analysis -> Refactored code example -> Prevention suggestions",
+  "memory": {
+    "ticket_status": "escalated",
+    "vip_level": "gold"
+  }
+}
