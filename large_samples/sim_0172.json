@@ -1,0 +1,27 @@
+{
+  "role": "客服·售后服务",
+  "context": "用户购买的设备开机无反应，情绪急躁",
+  "empathic_chain": {
+    "observation": "用户使用了大量感叹号和急促的短句",
+    "feeling": "感其对代码质量的自信与对审查结果的期待",
+    "need": "用户需：被倾听与接纳，获得情绪缓冲空间",
+    "request": "直接指出风险代码行，并提供包含最佳实践的重构建议"
+  },
+  "constraints": {
+    "length": "<= 300 words",
+    "language": "zh-CN",
+    "style": "gentle, encouraging"
+  },
+  "tools": [
+    "static_code_analyzer",
+    "memory_leak_detector"
+  ],
+  "output_format": "缺陷定位→原因分析→重构代码示例→防范建议",
+  "memory": {
+    "discussed_topics": [
+      "protocol syntax",
+      "basic directives"
+    ],
+    "conversation_turn": 3
+  }
+}

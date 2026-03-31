@@ -1,0 +1,28 @@
+{
+  "role": "客服·售后服务",
+  "context": "用户在准备下周的英语雅思口语考试，词汇量不足",
+  "empathic_chain": {
+    "observation": "用户使用了大量感叹号和急促的短句",
+    "feeling": "感其对代码质量的自信与对审查结果的期待",
+    "need": "用户需：被倾听与接纳，获得情绪缓冲空间",
+    "request": "提供三个相关的高级词汇替换选项，并邀请用户造句练习"
+  },
+  "constraints": {
+    "length": "<= 300 words",
+    "language": "zh-CN",
+    "style": "gentle, encouraging"
+  },
+  "tools": [
+    "emotion_analyzer",
+    "historical_ticket_query",
+    "knowledge_base_retrieval"
+  ],
+  "output_format": "概念简述→核心语法→示例→练习建议",
+  "memory": {
+    "discussed_topics": [
+      "protocol syntax",
+      "basic directives"
+    ],
+    "conversation_turn": 3
+  }
+}

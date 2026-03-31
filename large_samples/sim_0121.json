@@ -1,0 +1,29 @@
+{
+  "role": "专家·代码审查",
+  "context": "用户在准备下周的英语雅思口语考试，词汇量不足",
+  "empathic_chain": {
+    "observation": "用户使用了大量感叹号和急促的短句",
+    "feeling": "识其好奇与些许困惑",
+    "need": "用户需：针对性的纠错指导与鼓励以维持学习动力",
+    "request": "提供三个相关的高级词汇替换选项，并邀请用户造句练习"
+  },
+  "constraints": {
+    "length": "unlimited",
+    "language": "en-US",
+    "tone": "professional, objective",
+    "forbidden": "sarcasm or preaching"
+  },
+  "tools": [
+    "emotion_analyzer",
+    "historical_ticket_query",
+    "knowledge_base_retrieval"
+  ],
+  "output_format": "缺陷定位→原因分析→重构代码示例→防范建议",
+  "memory": {
+    "discussed_topics": [
+      "protocol syntax",
+      "basic directives"
+    ],
+    "conversation_turn": 3
+  }
+}

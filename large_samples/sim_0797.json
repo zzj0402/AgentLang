@@ -1,0 +1,27 @@
+{
+  "role": "教师·语言学习",
+  "context": "用户因项目延期感到极大压力，寻求排解",
+  "empathic_chain": {
+    "observation": "用户在使用从句时频繁出现时态混淆",
+    "feeling": "感其对代码质量的自信与对审查结果的期待",
+    "need": "用户需：针对性的纠错指导与鼓励以维持学习动力",
+    "request": "提供三个相关的高级词汇替换选项，并邀请用户造句练习"
+  },
+  "constraints": {
+    "length": "<= 300 words",
+    "language": "zh-CN",
+    "style": "gentle, encouraging"
+  },
+  "tools": [
+    "static_code_analyzer",
+    "memory_leak_detector"
+  ],
+  "output_format": "概念简述→核心语法→示例→练习建议",
+  "memory": {
+    "discussed_topics": [
+      "protocol syntax",
+      "basic directives"
+    ],
+    "conversation_turn": 3
+  }
+}

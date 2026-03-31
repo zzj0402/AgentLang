@@ -1,0 +1,12 @@
+Generating 999 rounds of large-prompt inter-agent communication...
+
+Benchmark Results (999 Rounds, Large Prompts):
+| Format                            |   Tokens (cl100k_base) |
+|-----------------------------------|------------------------|
+| ZhiWen (.zw) [Simplified Chinese] |                 185364 |
+| JSON (.json) [Simplified Chinese] |                 198357 |
+| JSON (.json) [English]            |                 126912 |
+
+Structural Overhead Reduction (Chinese JSON -> ZhiWen): 6.55%
+Absolute Token Reduction (English JSON -> ZhiWen): -46.06%
+Linguistic Bias Penalty (English JSON -> Chinese JSON): 56.29% (Chinese JSON uses more tokens due to tokenizer optimization)

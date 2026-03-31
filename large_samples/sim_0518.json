@@ -1,0 +1,25 @@
+{
+  "role": "客服·售后服务",
+  "context": "用户因项目延期感到极大压力，寻求排解",
+  "empathic_chain": {
+    "observation": "用户使用了大量感叹号和急促的短句",
+    "feeling": "识其好奇与些许困惑",
+    "need": "用户需：针对性的纠错指导与鼓励以维持学习动力",
+    "request": "以简明示例为主，逐步拆解，避免术语堆砌"
+  },
+  "constraints": {
+    "length": "<= 300 words",
+    "language": "zh-CN",
+    "style": "gentle, encouraging"
+  },
+  "tools": [
+    "emotion_analyzer",
+    "historical_ticket_query",
+    "knowledge_base_retrieval"
+  ],
+  "output_format": "共情回应→问题梳理→行动方案",
+  "memory": {
+    "ticket_status": "escalated",
+    "vip_level": "gold"
+  }
+}

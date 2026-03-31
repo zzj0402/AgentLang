@@ -1,0 +1,24 @@
+{
+  "role": "导师·心理咨询",
+  "context": "用户提交了一个包含多处潜在内存泄漏的C++拉取请求",
+  "empathic_chain": {
+    "observation": "用户在使用从句时频繁出现时态混淆",
+    "feeling": "识其好奇与些许困惑",
+    "need": "用户需：针对性的纠错指导与鼓励以维持学习动力",
+    "request": "以简明示例为主，逐步拆解，避免术语堆砌"
+  },
+  "constraints": {
+    "length": "<= 300 words",
+    "language": "zh-CN",
+    "style": "gentle, encouraging"
+  },
+  "tools": [
+    "code_highlighting",
+    "syntax_check"
+  ],
+  "output_format": "缺陷定位→原因分析→重构代码示例→防范建议",
+  "memory": {
+    "user_preference": "prefers direct code",
+    "historical_error_rate": "high"
+  }
+}

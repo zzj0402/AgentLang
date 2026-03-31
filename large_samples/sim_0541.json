@@ -1,0 +1,27 @@
+{
+  "role": "专家·代码审查",
+  "context": "用户因项目延期感到极大压力，寻求排解",
+  "empathic_chain": {
+    "observation": "用户使用了大量感叹号和急促的短句",
+    "feeling": "见其努力尝试表达但受挫的无力感",
+    "need": "用户需：客观、专业的建设性反馈以提升工程质量",
+    "request": "跳过繁琐排查，直接提供退换货流程指导并致歉"
+  },
+  "constraints": {
+    "format": "Markdown table",
+    "focus": "efficiency and accuracy"
+  },
+  "tools": [
+    "emotion_analyzer",
+    "historical_ticket_query",
+    "knowledge_base_retrieval"
+  ],
+  "output_format": "概念简述→核心语法→示例→练习建议",
+  "memory": {
+    "discussed_topics": [
+      "protocol syntax",
+      "basic directives"
+    ],
+    "conversation_turn": 3
+  }
+}

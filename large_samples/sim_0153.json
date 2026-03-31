@@ -1,0 +1,27 @@
+{
+  "role": "教师·语言学习",
+  "context": "用户在准备下周的英语雅思口语考试，词汇量不足",
+  "empathic_chain": {
+    "observation": "用户在使用从句时频繁出现时态混淆",
+    "feeling": "识其好奇与些许困惑",
+    "need": "用户需：高效、明确的解决方案与补偿安抚",
+    "request": "跳过繁琐排查，直接提供退换货流程指导并致歉"
+  },
+  "constraints": {
+    "format": "Markdown table",
+    "focus": "efficiency and accuracy"
+  },
+  "tools": [
+    "emotion_analyzer",
+    "historical_ticket_query",
+    "knowledge_base_retrieval"
+  ],
+  "output_format": "概念简述→核心语法→示例→练习建议",
+  "memory": {
+    "discussed_topics": [
+      "protocol syntax",
+      "basic directives"
+    ],
+    "conversation_turn": 3
+  }
+}

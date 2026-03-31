@@ -1,0 +1,10 @@
+
+Token Cruncher Benchmark Results:
+
+| ZhiWen File   | Equivalent File   |   ZhiWen Tokens |   Equivalent Tokens | Reduction   |
+|---------------|-------------------|-----------------|---------------------|-------------|
+| sample1.zw    | sample1.json      |             231 |                 214 | -7.94%      |
+
+Overall Tokens (ZhiWen): 231
+Overall Tokens (Equivalent): 214
+Overall Reduction: -7.94%

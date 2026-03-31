@@ -1,0 +1,25 @@
+{
+  "role": "专家·代码审查",
+  "context": "用户购买的设备开机无反应，情绪急躁",
+  "empathic_chain": {
+    "observation": "代码逻辑存在循环依赖，且未包含任何单元测试",
+    "feeling": "察觉其焦虑与深深的挫败感",
+    "need": "用户需：被倾听与接纳，获得情绪缓冲空间",
+    "request": "提供三个相关的高级词汇替换选项，并邀请用户造句练习"
+  },
+  "constraints": {
+    "length": "<= 300 words",
+    "language": "zh-CN",
+    "style": "gentle, encouraging"
+  },
+  "tools": [
+    "emotion_analyzer",
+    "historical_ticket_query",
+    "knowledge_base_retrieval"
+  ],
+  "output_format": "共情回应→问题梳理→行动方案",
+  "memory": {
+    "ticket_status": "escalated",
+    "vip_level": "gold"
+  }
+}

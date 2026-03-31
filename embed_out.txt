@@ -1,0 +1,35 @@
+
+==================================================
+Loading embedding model: paraphrase-multilingual-MiniLM-L12-v2...
+
+Embedding Similarity Benchmark Results (Model: paraphrase-multilingual-MiniLM-L12-v2):
+
+| ZhiWen File   | Equivalent File   |   Cosine Similarity |
+|---------------|-------------------|---------------------|
+| sample1.zw    | sample1.json      |              0.8013 |
+
+Average Cosine Similarity (paraphrase-multilingual-MiniLM-L12-v2): 0.8013
+
+
+==================================================
+Loading embedding model: all-MiniLM-L6-v2...
+
+Embedding Similarity Benchmark Results (Model: all-MiniLM-L6-v2):
+
+| ZhiWen File   | Equivalent File   |   Cosine Similarity |
+|---------------|-------------------|---------------------|
+| sample1.zw    | sample1.json      |              0.2287 |
+
+Average Cosine Similarity (all-MiniLM-L6-v2): 0.2287
+
+
+==================================================
+Loading embedding model: sentence-transformers/use-cmlm-multilingual...
+
+Embedding Similarity Benchmark Results (Model: sentence-transformers/use-cmlm-multilingual):
+
+| ZhiWen File   | Equivalent File   |   Cosine Similarity |
+|---------------|-------------------|---------------------|
+| sample1.zw    | sample1.json      |              0.7385 |
+
+Average Cosine Similarity (sentence-transformers/use-cmlm-multilingual): 0.7385
