@@ -13,6 +13,10 @@ The keywords **MUST**, **MUST NOT**, **SHOULD**, **SHOULD NOT**, and **MAY** fol
 
 智文 protocol files MUST use the `.zw` extension.
 
+## Language and Grammar
+
+All content within a `.zw` file MUST be written in Classical Chinese (文言文) unless they are non-translatable terms. All content SHOULD follow the defined grammar and the standard vocabulary if possible.
+
 ## Core Design Principles
 
 | Principle | Implication |
