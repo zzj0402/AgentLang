@@ -1,0 +1,108 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading Universal Sentence Encoder equivalent for similarity scoring...
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights:  77%|███████▋  | 153/199 [00:00<00:00, 1516.96it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 1810.14it/s]
+[1mBertModel LOAD REPORT[0m from: sentence-transformers/use-cmlm-multilingual
+Key                                        | Status     |  |
+-------------------------------------------+------------+--+-
+cls.seq_relationship.weight                | UNEXPECTED |  |
+cls.predictions.bias                       | UNEXPECTED |  |
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  |
+cls.predictions.transform.dense.bias       | UNEXPECTED |  |
+cls.seq_relationship.bias                  | UNEXPECTED |  |
+bert.embeddings.position_ids               | UNEXPECTED |  |
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  |
+cls.predictions.transform.dense.weight     | UNEXPECTED |  |
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Benchmarking English to ZhiWen Translation using local models...
+
+Loading model: Qwen/Qwen2.5-0.5B-Instruct
+Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]Loading weights:  26%|██▌       | 75/290 [00:00<00:00, 737.17it/s]Loading weights:  73%|███████▎  | 213/290 [00:00<00:00, 1098.10it/s]Loading weights: 100%|██████████| 290/290 [00:00<00:00, 1310.83it/s]
+Passing `generation_config` together with generation-related arguments=({'max_new_tokens', 'temperature'}) is deprecated and will be removed in future versions. Please pass either a `generation_config` object OR all generation parameters explicitly, but not both.
+Both `max_new_tokens` (=50) and `max_length`(=20) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Both `max_new_tokens` (=50) and `max_length`(=20) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Both `max_new_tokens` (=50) and `max_length`(=20) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Benchmarking model: Qwen/Qwen2.5-0.5B-Instruct
+
+Loading model: HuggingFaceTB/SmolLM2-135M-Instruct
+Loading weights:   0%|          | 0/272 [00:00<?, ?it/s]Loading weights:  22%|██▏       | 60/272 [00:00<00:00, 543.28it/s]Loading weights:  44%|████▍     | 119/272 [00:00<00:00, 555.35it/s]Loading weights:  64%|██████▍   | 175/272 [00:00<00:00, 511.11it/s]Loading weights: 100%|██████████| 272/272 [00:00<00:00, 630.06it/s]
+Both `max_new_tokens` (=50) and `max_length`(=20) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Both `max_new_tokens` (=50) and `max_length`(=20) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Both `max_new_tokens` (=50) and `max_length`(=20) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Benchmarking model: HuggingFaceTB/SmolLM2-135M-Instruct
+
+Loading model: Qwen/Qwen2.5-1.5B-Instruct
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]Loading weights:  26%|██▌       | 87/338 [00:00<00:00, 852.04it/s]Loading weights: 100%|██████████| 338/338 [00:00<00:00, 1836.39it/s]
+Both `max_new_tokens` (=50) and `max_length`(=20) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Both `max_new_tokens` (=50) and `max_length`(=20) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Both `max_new_tokens` (=50) and `max_length`(=20) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Benchmarking model: Qwen/Qwen2.5-1.5B-Instruct
+
+Loading model: HuggingFaceTB/SmolLM2-360M-Instruct
+Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]Loading weights:  45%|████▌     | 131/290 [00:00<00:00, 1307.16it/s]Loading weights: 100%|██████████| 290/290 [00:00<00:00, 1627.86it/s]
+Both `max_new_tokens` (=50) and `max_length`(=20) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Both `max_new_tokens` (=50) and `max_length`(=20) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Both `max_new_tokens` (=50) and `max_length`(=20) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Benchmarking model: HuggingFaceTB/SmolLM2-360M-Instruct
+
+Loading model: Qwen/Qwen2.5-Coder-0.5B-Instruct
+Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]Loading weights:  51%|█████     | 147/290 [00:00<00:00, 1458.88it/s]Loading weights: 100%|██████████| 290/290 [00:00<00:00, 1656.92it/s]
+Both `max_new_tokens` (=50) and `max_length`(=20) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Both `max_new_tokens` (=50) and `max_length`(=20) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Both `max_new_tokens` (=50) and `max_length`(=20) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Benchmarking model: Qwen/Qwen2.5-Coder-0.5B-Instruct
+
+Loading model: Qwen/Qwen2.5-Math-1.5B-Instruct
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]Loading weights:  18%|█▊        | 62/338 [00:00<00:00, 619.45it/s]Loading weights:  37%|███▋      | 124/338 [00:00<00:00, 482.29it/s]Loading weights:  56%|█████▌    | 190/338 [00:00<00:00, 546.07it/s]Loading weights: 100%|██████████| 338/338 [00:00<00:00, 870.39it/s]
+Both `max_new_tokens` (=50) and `max_length`(=20) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Both `max_new_tokens` (=50) and `max_length`(=20) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Both `max_new_tokens` (=50) and `max_length`(=20) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Benchmarking model: Qwen/Qwen2.5-Math-1.5B-Instruct
+
+Loading model: allenai/OLMo-1B-0724-Instruct
+Failed to load model allenai/OLMo-1B-0724-Instruct: allenai/OLMo-1B-0724-Instruct is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `hf auth login` or by passing `token=<your_token>`
+
+Loading model: Qwen/Qwen1.5-0.5B-Chat
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights:  44%|████▍     | 128/291 [00:00<00:00, 1277.09it/s]Loading weights: 100%|██████████| 291/291 [00:00<00:00, 1735.86it/s]
+Both `max_new_tokens` (=50) and `max_length`(=20) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Both `max_new_tokens` (=50) and `max_length`(=20) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Both `max_new_tokens` (=50) and `max_length`(=20) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Benchmarking model: Qwen/Qwen1.5-0.5B-Chat
+
+Loading model: Qwen/Qwen1.5-1.8B-Chat
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights:  53%|█████▎    | 155/291 [00:00<00:00, 1544.42it/s]Loading weights: 100%|██████████| 291/291 [00:00<00:00, 1695.94it/s]
+Both `max_new_tokens` (=50) and `max_length`(=20) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Both `max_new_tokens` (=50) and `max_length`(=20) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Both `max_new_tokens` (=50) and `max_length`(=20) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Benchmarking model: Qwen/Qwen1.5-1.8B-Chat
+
+| Model                       |   Eng Toks |   ZW Toks | Reduction   |   Similarity | Latency   | Result Preview       |
+|-----------------------------|------------|-----------|-------------|--------------|-----------|----------------------|
+| Qwen2.5-0.5B-Instruct       |         27 |        38 | -40.74%     |       0.3297 | 4.487s    | 子君非常沮丧，因为代码总是出错。你... |
+| Qwen2.5-0.5B-Instruct       |         15 |        81 | -440.00%    |       0.2038 | 8.843s    | 微服务架构概览报告  1. 介绍：... |
+| Qwen2.5-0.5B-Instruct       |         16 |        18 | -12.50%     |       0.6365 | 2.491s    | 我對如何使用心靈推理鏈不了解。      |
+| SmolLM2-135M-Instruct       |         27 |        42 | -55.56%     |       0.324  | 8.607s    | The user is frust... |
+| SmolLM2-135M-Instruct       |         15 |        47 | -213.33%    |       0.2916 | 3.209s    | <<Microservices A... |
+| SmolLM2-135M-Instruct       |         16 |        49 | -206.25%    |       0.3296 | 6.432s    | The empathic reas... |
+| Qwen2.5-1.5B-Instruct       |         27 |        44 | -62.96%     |       0.6074 | 17.014s   | 急矣，コード崩れがち。冷静に落ち着... |
+| Qwen2.5-1.5B-Instruct       |         15 |        31 | -106.67%    |       0.6234 | 13.080s   | 微服務系統架構報告，含微服務及其依... |
+| Qwen2.5-1.5B-Instruct       |         16 |        21 | -31.25%     |       0.5725 | 8.654s    | 惑於此規則中感同身受鏈用法。       |
+| SmolLM2-360M-Instruct       |         27 |        40 | -48.15%     |       0.0501 | 6.070s    | 爆炙爆Ｃ荡Ｃ荡Ｃ荡Ｃ荡Ｃ荡Ｃ荡Ｃ荡Ｃ荡� |
+| SmolLM2-360M-Instruct       |         15 |        29 | -93.33%     |      -0.0243 | 7.797s    | 文言文:  文言文:  文言文: ... |
+| SmolLM2-360M-Instruct       |         16 |        33 | -106.25%    |       0.1992 | 5.217s    | 無疑使用聖語聖語聖語聖語聖語聖語聖語   |
+| Qwen2.5-Coder-0.5B-Instruct |         27 |        39 | -44.44%     |       0.3858 | 4.729s    | 用户非常沮丧，代码仍然崩溃。你需要... |
+| Qwen2.5-Coder-0.5B-Instruct |         15 |        80 | -433.33%    |       0.265  | 7.092s    | 系统架构报告：微服务与依赖分析  ... |
+| Qwen2.5-Coder-0.5B-Instruct |         16 |        15 | 6.25%       |       0.6378 | 2.591s    | 我理解如何使用这种伦理推理链。      |
+| Qwen2.5-Math-1.5B-Instruct  |         27 |        50 | -85.19%     |       0.1324 | 18.300s   | Sure, I can help ... |
+| Qwen2.5-Math-1.5B-Instruct  |         15 |        53 | -253.33%    |      -0.0037 | 15.060s   | As an AI language... |
+| Qwen2.5-Math-1.5B-Instruct  |         16 |        50 | -212.50%    |       0.285  | 16.994s   | To address your c... |
+| Qwen1.5-0.5B-Chat           |         27 |        38 | -40.74%     |       0.326  | 3.717s    | 用户很沮丧，代码总是出错。你需要冷... |
+| Qwen1.5-0.5B-Chat           |         15 |        50 | -233.33%    |       0.2496 | 8.511s    | I'm sorry, but I ... |
+| Qwen1.5-0.5B-Chat           |         16 |        22 | -37.50%     |       0.7627 | 2.482s    | 我对于这个协议中使用同情心推理链的困惑。 |
+| Qwen1.5-1.8B-Chat           |         27 |        83 | -207.41%    |       0.1277 | 15.092s   | 修治之策，以Python為基，循序... |
+| Qwen1.5-1.8B-Chat           |         15 |        90 | -500.00%    |       0.2381 | 15.444s   | 微服务架构报告  一、系统概述 本... |
+| Qwen1.5-1.8B-Chat           |         16 |        22 | -37.50%     |       0.7813 | 7.538s    | 我困惑于如何在本协议中运用同情推理链。  |
+
+Report written to TRANSLATION_BENCHMARK_REPORT.md
