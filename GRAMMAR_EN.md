@@ -17,9 +17,9 @@ If it's obvious who is acting, drop the pronoun entirely.
 *   **Classical Chinese:** `客问。` (2 chars / ~2 tokens) *Literally: "Guest asks."*
 
 ### Omit "It", "Them", "Him", "Her"
-Objects are also routinely dropped if understood.
+Objects are also routinely dropped if understood. The object pronoun (`之`) can even be omitted entirely if the action is clear.
 *   **English:** `I saw the error and I fixed it.`
-*   **Classical Chinese:** `见错，改之。` (4 chars / ~3 tokens) *Literally: "See error, fix it." (`之` acts as a generic "it").*
+*   **Classical Chinese:** `见错，改。` (3 chars / ~2 tokens) *Literally: "See error, fix."*
 
 ---
 
@@ -52,7 +52,7 @@ In English, words usually have fixed parts of speech (a noun is a noun, a verb i
 You can use a noun to describe an action associated with that noun.
 *   **Word:** `衣` (yī) - Noun: Clothes.
 *   **Usage:** `衣人` (yì rén) - Verb: To clothe someone.
-*   **Agent Context:** `代码` (Code). `代码之` -> "Code it."
+*   **Agent Context:** `码` (Code). `码之` -> "Code it."
 
 ### Adjectives acting as Verbs
 You can use an adjective to mean "to consider something [adjective]" or "to make something [adjective]".
