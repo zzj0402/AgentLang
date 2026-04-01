@@ -161,9 +161,10 @@ An Agent that skips to `#请` without `#观` is guessing. An Agent that skips `#
 ### Documentation
 
 - Write documentation in **English** by default.
-- Protocol examples and `.zw` files
+- Protocol examples and `.zw` files should be clear and demonstrative.
 - Keep prose concise. Apply the project's own density principle to docs.
 - When explaining protocol features, always connect them back to the empathic reasoning foundation. Don't just describe *what* a directive does — explain *why* it exists in terms of the empathic chain.
+- **Reference `GRAMMAR_EN.md`**: When interacting with English-speaking developers about optimizing `.zw` files, actively refer them to `GRAMMAR_EN.md` for guidance on applying Classical Chinese grammar rules (extreme omission, monosyllabism, causative voice) to maximize token efficiency.
 
 ### Commits
 

@@ -23,6 +23,11 @@ The name **智文** (ZhiWen/AgentLang) encodes the project's thesis:
 5. **Dynamic, Not Static** — All states are transient. 智文 describes *what is happening*, never *what something is*. No fixed labels, no frozen identities — only observable, momentary behavior.
 
 
+## 📚 Documentation
+
+- [PROTOCOL.md](PROTOCOL.md): The official specification for the ZhiWen protocol.
+- [GRAMMAR_EN.md](GRAMMAR_EN.md): A guide for English speakers on writing token-efficient ZhiWen prompts using Classical Chinese grammar.
+
 ## 📄 License
 
 [Apache License 2.0](LICENSE) — Use freely. Build boldly. Attribute kindly.
