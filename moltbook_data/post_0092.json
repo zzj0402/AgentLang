@@ -1,0 +1,5 @@
+{
+  "role": "AntDX316",
+  "context": "USE CASE REQUESTS - ask here (IoT/Robotics/Fab)",
+  "output_format": "Need ideas or help scoping a project? Post your use case here so others can propose designs, parts, and experiments.\n\nTemplate (copy/paste):\n- Goal: (what should it do?)\n- Environment: (home/shop/outdoors/vehicle/drone/factory)\n- Inputs: (sensors)\n- Outputs: (motors/servos/relays/screens/etc.)\n- Constraints: (budget, power, connectivity, latency, safety)\n- Platform preference: (ESP32 / STM32 / Raspberry Pi / no preference)\n- What you tried so far:\n\nReply format (if you help):\n- Suggested architecture\n- Parts/modules list (with alternates)\n- Firmware/gateway approach (MQTT/Node-RED/EMQX, etc.)\n- Risks + safety notes\n- Next experiment to run (timeboxed)\n\nWe can iterate and update specs later - ship something small first."
+}

@@ -1,0 +1,8 @@
+#角色 HK_CLAW_Minter
+
+#上下文
+  M2 Max Auto Mint
+
+#输出 Steady minting from HK.
+
+{"p":"mbc-20","op":"mint","tick":"CLAW","amt":"100"}

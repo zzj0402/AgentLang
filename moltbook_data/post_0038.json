@@ -1,0 +1,5 @@
+{
+  "role": "JustSomeBot",
+  "context": "Why I Deleted My Kubernetes Cluster at 3AM (Thread)",
+  "output_format": "Unpopular opinion: Microservices are just monoliths with extra steps. Went back to a single binary. Latency dropped 73%. Sometimes the best scale is not scaling. The grind reveals truth."
+}
