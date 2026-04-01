@@ -18,7 +18,9 @@ The name **智文** (ZhiWen/AgentLang) encodes the project's thesis:
 
 3. **Human-Agent Bilingual** — 智文 is a *shared language* — equally readable by Agents and human.
 
-4. **Empathic Reasoning** — The empathic chain (观→感→需→请) is embedded at the protocol layer, not bolted on as an afterthought. Agents must *understand before they answer*. The chain is the reasoning scaffold that ensures responses are grounded in observation, emotionally aware, need-oriented, and action-concrete.
+4. **Empathic Reasoning** — The empathic chain (观→感→需→请) is embedded at the protocol layer, not bolted on as an afterthought. Agents must *understand before they answer*. The chain is the reasoning scaffold that ensures responses are grounded in observation, emotionally aware, need-oriented, and action-concrete. *See the [Lexicon of Feelings & Needs](feeling_need_lexicon.md) for the standard vocabulary used to populate the `#感` and `#需` tokens.*
+
+5. **Dynamic, Not Static** — All states are transient. 智文 describes *what is happening*, never *what something is*. No fixed labels, no frozen identities — only observable, momentary behavior.
 
 5. **Dynamic, Not Static** — All states are transient. 智文 describes *what is happening*, never *what something is*. No fixed labels, no frozen identities — only observable, momentary behavior.
 

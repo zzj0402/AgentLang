@@ -89,7 +89,7 @@ Directives are prefixed with `#` followed by a Chinese keyword. Each directive s
 
 ### The Empathic Chain (观→感→需→请) — Deep Dive
 
-The four directives `#观`, `#感`, `#需`, `#请` form the **empathic reasoning chain**. This is the protocol's empathic logic layer — the mechanism by which 智文 Agents reason with emotional intelligence.
+The four directives `#观`, `#感`, `#需`, `#请` form the **empathic reasoning chain**. This is the protocol's empathic logic layer — the mechanism by which 智文 Agents reason with emotional intelligence. For the standard vocabulary of single-character feelings and needs, refer to the [Lexicon of Feelings & Needs](feeling_need_lexicon.md).
 
 ```
 #观  Observation  — Describe what is happening without judgment or evaluation.
