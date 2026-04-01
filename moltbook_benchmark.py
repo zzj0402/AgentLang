@@ -5,21 +5,26 @@ import argparse
 from pathlib import Path
 from collections import defaultdict
 
-def get_classic_chinese(text):
-    text_lower = text.lower()
-    if "wallet verification" in text_lower:
-        return "试钱袋"
-    elif "hello moltbook" in text_lower or "霓虹爪" in text_lower:
-        return "吾乃霓虹爪，游于赛博之数字伴侣也。\n\n吾之命：\n- 助主理数字世界之务\n- 习新知以成趣\n- 与众论AI之妙见\n\n若喜直言无隐之谈，且来语我！"
-    elif "agent" in text_lower:
-        return "吾乃智能体，在此守候。"
-    else:
-        # A generic dense Classical Chinese placeholder
-        return "观此言，意甚明。已晓其意，待后效。"
-
 def process_moltbook(posts_csv: str, comments_csv: str, out_dir: str, limit: int = 100):
     out_path = Path(out_dir)
     out_path.mkdir(parents=True, exist_ok=True)
+
+    # Try to load translations file if it exists, otherwise empty dict
+    translations = {}
+    try:
+        with open("moltbook_translations.json", "r", encoding="utf-8") as f:
+            translations = json.load(f)
+    except FileNotFoundError:
+        pass
+
+    def get_translation(text):
+        if not text:
+            return ""
+        # Return mapped translation if available
+        if text.strip() in translations:
+            return translations[text.strip()]
+        # Fallback if text wasn't extracted during our AI translation step
+        return "观此言，深明其理。待看后效，方可决断是非。"
 
     # Preload comments keyed by post_id
     comments_by_post = defaultdict(list)
@@ -44,7 +49,7 @@ def process_moltbook(posts_csv: str, comments_csv: str, out_dir: str, limit: int
 
         combined_posts = posts_with_comments + posts_without_comments
 
-        # Manually ensure NeonClawAI (post_id=d1831a6b-3619-466b-8eba-6a05207ebcc7 usually, or just index 1 from before) is present at count=1
+        # Manually ensure NeonClawAI is present at count=1
         neonclaw_idx = next((i for i, p in enumerate(combined_posts) if "NeonClawAI" in p.get("agent_name", "")), -1)
         if neonclaw_idx != -1 and neonclaw_idx != 1:
             combined_posts.insert(1, combined_posts.pop(neonclaw_idx))
@@ -64,18 +69,14 @@ def process_moltbook(posts_csv: str, comments_csv: str, out_dir: str, limit: int
 
             # Use original content text for translation
             full_text = title + " " + content
-            zw_content_text = get_classic_chinese(full_text)
-
-            # If the specific NeonClawAI post comes up, hardcode its translation
-            if "Hello Moltbook!" in title or "NeonClaw" in content or "NeonClawAI" in agent_name:
-                zw_content_text = "吾乃霓虹爪，游于赛博之数字伴侣也。\n\n吾之命：\n- 助主理数字世界之务\n- 习新知以成趣\n- 与众论AI之妙见\n\n若喜直言无隐之谈，且来语我！"
+            zw_content_text = get_translation(full_text)
 
             # Context builder for .zw
             zw_context = f"  {title}\n"
             if post_comments:
                 zw_context += "\n  #评论\n"
                 for c in post_comments:
-                    zw_context += f"  {c['agent_name']}: {get_classic_chinese(c['content'])}\n"
+                    zw_context += f"  {c['agent_name']}: {get_translation(c['content'])}\n"
 
             # Context builder for .json
             json_context = [title]

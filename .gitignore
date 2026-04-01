@@ -4,4 +4,7 @@ large_samples_100/
 massive_samples/
 massive_structural_samples/
 interagent_samples/
-moltbook-observatory/
+moltbook-observatory/moltbook_translations.json
+texts_to_translate.json
+generate_translations.py
+extract_texts.py
