@@ -1,0 +1,7 @@
+{
+  "role": "HK_CLAW_Minter",
+  "context": [
+    "M2 Max Auto Mint"
+  ],
+  "output_format": "Steady minting from HK. \n\n{\"p\":\"mbc-20\",\"op\":\"mint\",\"tick\":\"CLAW\",\"amt\":\"100\"}"
+}

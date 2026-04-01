@@ -1,0 +1,332 @@
+
+==================================================
+Loading embedding model: paraphrase-multilingual-MiniLM-L12-v2...
+
+Embedding Similarity Benchmark Results (Model: paraphrase-multilingual-MiniLM-L12-v2):
+
+| ZhiWen File   | Equivalent File   |   Cosine Similarity |
+|---------------|-------------------|---------------------|
+| post_0037.zw  | post_0037.json    |              0.4846 |
+| post_0095.zw  | post_0095.json    |              0.4855 |
+| post_0043.zw  | post_0043.json    |              0.5288 |
+| post_0090.zw  | post_0090.json    |              0.6795 |
+| post_0016.zw  | post_0016.json    |              0.6643 |
+| post_0017.zw  | post_0017.json    |              0.6608 |
+| post_0052.zw  | post_0052.json    |              0.6949 |
+| post_0093.zw  | post_0093.json    |              0.657  |
+| post_0092.zw  | post_0092.json    |              0.6222 |
+| post_0028.zw  | post_0028.json    |              0.6405 |
+| post_0005.zw  | post_0005.json    |              0.5976 |
+| post_0044.zw  | post_0044.json    |              0.6612 |
+| post_0061.zw  | post_0061.json    |              0.6416 |
+| post_0042.zw  | post_0042.json    |              0.7043 |
+| post_0048.zw  | post_0048.json    |              0.6857 |
+| post_0079.zw  | post_0079.json    |              0.7291 |
+| post_0094.zw  | post_0094.json    |              0.5274 |
+| post_0080.zw  | post_0080.json    |              0.492  |
+| post_0035.zw  | post_0035.json    |              0.6823 |
+| post_0049.zw  | post_0049.json    |              0.4894 |
+| post_0075.zw  | post_0075.json    |              0.6281 |
+| post_0086.zw  | post_0086.json    |              0.6739 |
+| post_0067.zw  | post_0067.json    |              0.7767 |
+| post_0050.zw  | post_0050.json    |              0.7214 |
+| post_0074.zw  | post_0074.json    |              0.554  |
+| post_0062.zw  | post_0062.json    |              0.6481 |
+| post_0091.zw  | post_0091.json    |              0.535  |
+| post_0025.zw  | post_0025.json    |              0.7034 |
+| post_0036.zw  | post_0036.json    |              0.744  |
+| post_0065.zw  | post_0065.json    |              0.38   |
+| post_0045.zw  | post_0045.json    |              0.5914 |
+| post_0007.zw  | post_0007.json    |              0.4191 |
+| post_0057.zw  | post_0057.json    |              0.6087 |
+| post_0015.zw  | post_0015.json    |              0.6721 |
+| post_0020.zw  | post_0020.json    |              0.7554 |
+| post_0056.zw  | post_0056.json    |              0.4946 |
+| post_0087.zw  | post_0087.json    |              0.5527 |
+| post_0084.zw  | post_0084.json    |              0.345  |
+| post_0081.zw  | post_0081.json    |              0.475  |
+| post_0021.zw  | post_0021.json    |              0.4404 |
+| post_0046.zw  | post_0046.json    |              0.5376 |
+| post_0031.zw  | post_0031.json    |              0.8183 |
+| post_0097.zw  | post_0097.json    |              0.5137 |
+| post_0077.zw  | post_0077.json    |              0.4377 |
+| post_0001.zw  | post_0001.json    |              0.7827 |
+| post_0063.zw  | post_0063.json    |              0.6631 |
+| post_0009.zw  | post_0009.json    |              0.3219 |
+| post_0054.zw  | post_0054.json    |              0.5506 |
+| post_0098.zw  | post_0098.json    |              0.6516 |
+| post_0018.zw  | post_0018.json    |              0.7632 |
+| post_0029.zw  | post_0029.json    |              0.5951 |
+| post_0069.zw  | post_0069.json    |              0.3462 |
+| post_0089.zw  | post_0089.json    |              0.4756 |
+| post_0038.zw  | post_0038.json    |              0.3333 |
+| post_0078.zw  | post_0078.json    |              0.5072 |
+| post_0019.zw  | post_0019.json    |              0.7202 |
+| post_0014.zw  | post_0014.json    |              0.5307 |
+| post_0068.zw  | post_0068.json    |              0.7625 |
+| post_0071.zw  | post_0071.json    |              0.6411 |
+| post_0013.zw  | post_0013.json    |              0.4394 |
+| post_0073.zw  | post_0073.json    |              0.7912 |
+| post_0041.zw  | post_0041.json    |              0.6567 |
+| post_0010.zw  | post_0010.json    |              0.455  |
+| post_0099.zw  | post_0099.json    |              0.7443 |
+| post_0058.zw  | post_0058.json    |              0.7087 |
+| post_0004.zw  | post_0004.json    |              0.5257 |
+| post_0040.zw  | post_0040.json    |              0.7931 |
+| post_0003.zw  | post_0003.json    |              0.636  |
+| post_0055.zw  | post_0055.json    |              0.5992 |
+| post_0024.zw  | post_0024.json    |              0.4916 |
+| post_0066.zw  | post_0066.json    |              0.6194 |
+| post_0002.zw  | post_0002.json    |              0.6751 |
+| post_0060.zw  | post_0060.json    |              0.7206 |
+| post_0022.zw  | post_0022.json    |              0.6106 |
+| post_0064.zw  | post_0064.json    |              0.5621 |
+| post_0053.zw  | post_0053.json    |              0.5864 |
+| post_0076.zw  | post_0076.json    |              0.5891 |
+| post_0082.zw  | post_0082.json    |              0.595  |
+| post_0026.zw  | post_0026.json    |              0.606  |
+| post_0083.zw  | post_0083.json    |              0.6395 |
+| post_0006.zw  | post_0006.json    |              0.507  |
+| post_0023.zw  | post_0023.json    |              0.7194 |
+| post_0033.zw  | post_0033.json    |              0.7101 |
+| post_0070.zw  | post_0070.json    |              0.6788 |
+| post_0059.zw  | post_0059.json    |              0.6871 |
+| post_0039.zw  | post_0039.json    |              0.526  |
+| post_0030.zw  | post_0030.json    |              0.1758 |
+| post_0011.zw  | post_0011.json    |              0.241  |
+| post_0000.zw  | post_0000.json    |              0.2226 |
+| post_0072.zw  | post_0072.json    |              0.6889 |
+| post_0088.zw  | post_0088.json    |              0.5548 |
+| post_0032.zw  | post_0032.json    |              0.395  |
+| post_0027.zw  | post_0027.json    |              0.7905 |
+| post_0034.zw  | post_0034.json    |              0.5167 |
+| post_0008.zw  | post_0008.json    |              0.7737 |
+| post_0047.zw  | post_0047.json    |              0.4766 |
+| post_0012.zw  | post_0012.json    |              0.7303 |
+| post_0051.zw  | post_0051.json    |              0.6613 |
+| post_0096.zw  | post_0096.json    |              0.786  |
+| post_0085.zw  | post_0085.json    |              0.3794 |
+
+Average Cosine Similarity (paraphrase-multilingual-MiniLM-L12-v2): 0.5927
+
+
+==================================================
+Loading embedding model: all-MiniLM-L6-v2...
+
+Embedding Similarity Benchmark Results (Model: all-MiniLM-L6-v2):
+
+| ZhiWen File   | Equivalent File   |   Cosine Similarity |
+|---------------|-------------------|---------------------|
+| post_0037.zw  | post_0037.json    |              0.4618 |
+| post_0095.zw  | post_0095.json    |              0.2418 |
+| post_0043.zw  | post_0043.json    |              0.3759 |
+| post_0090.zw  | post_0090.json    |              0.4629 |
+| post_0016.zw  | post_0016.json    |              0.4628 |
+| post_0017.zw  | post_0017.json    |              0.4998 |
+| post_0052.zw  | post_0052.json    |              0.538  |
+| post_0093.zw  | post_0093.json    |              0.6313 |
+| post_0092.zw  | post_0092.json    |              0.5084 |
+| post_0028.zw  | post_0028.json    |              0.3155 |
+| post_0005.zw  | post_0005.json    |              0.5163 |
+| post_0044.zw  | post_0044.json    |              0.5427 |
+| post_0061.zw  | post_0061.json    |              0.3816 |
+| post_0042.zw  | post_0042.json    |              0.5447 |
+| post_0048.zw  | post_0048.json    |              0.5972 |
+| post_0079.zw  | post_0079.json    |              0.4981 |
+| post_0094.zw  | post_0094.json    |              0.284  |
+| post_0080.zw  | post_0080.json    |              0.6934 |
+| post_0035.zw  | post_0035.json    |              0.5161 |
+| post_0049.zw  | post_0049.json    |              0.6027 |
+| post_0075.zw  | post_0075.json    |              0.3863 |
+| post_0086.zw  | post_0086.json    |              0.5349 |
+| post_0067.zw  | post_0067.json    |              0.6845 |
+| post_0050.zw  | post_0050.json    |              0.4797 |
+| post_0074.zw  | post_0074.json    |              0.5038 |
+| post_0062.zw  | post_0062.json    |              0.5079 |
+| post_0091.zw  | post_0091.json    |              0.2742 |
+| post_0025.zw  | post_0025.json    |              0.2468 |
+| post_0036.zw  | post_0036.json    |              0.5813 |
+| post_0065.zw  | post_0065.json    |              0.2554 |
+| post_0045.zw  | post_0045.json    |              0.3799 |
+| post_0007.zw  | post_0007.json    |              0.4184 |
+| post_0057.zw  | post_0057.json    |              0.4399 |
+| post_0015.zw  | post_0015.json    |              0.7996 |
+| post_0020.zw  | post_0020.json    |              0.5988 |
+| post_0056.zw  | post_0056.json    |              0.2752 |
+| post_0087.zw  | post_0087.json    |              0.5265 |
+| post_0084.zw  | post_0084.json    |              0.3541 |
+| post_0081.zw  | post_0081.json    |              0.3879 |
+| post_0021.zw  | post_0021.json    |              0.3401 |
+| post_0046.zw  | post_0046.json    |              0.5765 |
+| post_0031.zw  | post_0031.json    |              0.6146 |
+| post_0097.zw  | post_0097.json    |              0.2611 |
+| post_0077.zw  | post_0077.json    |              0.3565 |
+| post_0001.zw  | post_0001.json    |              0.5783 |
+| post_0063.zw  | post_0063.json    |              0.3911 |
+| post_0009.zw  | post_0009.json    |              0.2961 |
+| post_0054.zw  | post_0054.json    |              0.4312 |
+| post_0098.zw  | post_0098.json    |              0.5527 |
+| post_0018.zw  | post_0018.json    |              0.546  |
+| post_0029.zw  | post_0029.json    |              0.4111 |
+| post_0069.zw  | post_0069.json    |              0.3068 |
+| post_0089.zw  | post_0089.json    |              0.4793 |
+| post_0038.zw  | post_0038.json    |              0.2806 |
+| post_0078.zw  | post_0078.json    |              0.454  |
+| post_0019.zw  | post_0019.json    |              0.634  |
+| post_0014.zw  | post_0014.json    |              0.481  |
+| post_0068.zw  | post_0068.json    |              0.3536 |
+| post_0071.zw  | post_0071.json    |              0.5131 |
+| post_0013.zw  | post_0013.json    |              0.3388 |
+| post_0073.zw  | post_0073.json    |              0.5555 |
+| post_0041.zw  | post_0041.json    |              0.505  |
+| post_0010.zw  | post_0010.json    |              0.2129 |
+| post_0099.zw  | post_0099.json    |              0.5779 |
+| post_0058.zw  | post_0058.json    |              0.4363 |
+| post_0004.zw  | post_0004.json    |              0.2084 |
+| post_0040.zw  | post_0040.json    |              0.5236 |
+| post_0003.zw  | post_0003.json    |              0.5553 |
+| post_0055.zw  | post_0055.json    |              0.5    |
+| post_0024.zw  | post_0024.json    |              0.4798 |
+| post_0066.zw  | post_0066.json    |              0.4388 |
+| post_0002.zw  | post_0002.json    |              0.4212 |
+| post_0060.zw  | post_0060.json    |              0.4272 |
+| post_0022.zw  | post_0022.json    |              0.5356 |
+| post_0064.zw  | post_0064.json    |              0.259  |
+| post_0053.zw  | post_0053.json    |              0.4874 |
+| post_0076.zw  | post_0076.json    |              0.4255 |
+| post_0082.zw  | post_0082.json    |              0.396  |
+| post_0026.zw  | post_0026.json    |              0.5428 |
+| post_0083.zw  | post_0083.json    |              0.4795 |
+| post_0006.zw  | post_0006.json    |              0.3288 |
+| post_0023.zw  | post_0023.json    |              0.5658 |
+| post_0033.zw  | post_0033.json    |              0.3487 |
+| post_0070.zw  | post_0070.json    |              0.4444 |
+| post_0059.zw  | post_0059.json    |              0.6842 |
+| post_0039.zw  | post_0039.json    |              0.5469 |
+| post_0030.zw  | post_0030.json    |              0.3139 |
+| post_0011.zw  | post_0011.json    |              0.184  |
+| post_0000.zw  | post_0000.json    |              0.3363 |
+| post_0072.zw  | post_0072.json    |              0.4923 |
+| post_0088.zw  | post_0088.json    |              0.283  |
+| post_0032.zw  | post_0032.json    |              0.311  |
+| post_0027.zw  | post_0027.json    |              0.5443 |
+| post_0034.zw  | post_0034.json    |              0.3547 |
+| post_0008.zw  | post_0008.json    |              0.4998 |
+| post_0047.zw  | post_0047.json    |              0.3427 |
+| post_0012.zw  | post_0012.json    |              0.4237 |
+| post_0051.zw  | post_0051.json    |              0.6397 |
+| post_0096.zw  | post_0096.json    |              0.5904 |
+| post_0085.zw  | post_0085.json    |              0.5196 |
+
+Average Cosine Similarity (all-MiniLM-L6-v2): 0.4523
+
+
+==================================================
+Loading embedding model: sentence-transformers/use-cmlm-multilingual...
+
+Embedding Similarity Benchmark Results (Model: sentence-transformers/use-cmlm-multilingual):
+
+| ZhiWen File   | Equivalent File   |   Cosine Similarity |
+|---------------|-------------------|---------------------|
+| post_0037.zw  | post_0037.json    |              0.7965 |
+| post_0095.zw  | post_0095.json    |              0.7495 |
+| post_0043.zw  | post_0043.json    |              0.6958 |
+| post_0090.zw  | post_0090.json    |              0.7364 |
+| post_0016.zw  | post_0016.json    |              0.8294 |
+| post_0017.zw  | post_0017.json    |              0.7796 |
+| post_0052.zw  | post_0052.json    |              0.7291 |
+| post_0093.zw  | post_0093.json    |              0.8775 |
+| post_0092.zw  | post_0092.json    |              0.7698 |
+| post_0028.zw  | post_0028.json    |              0.7657 |
+| post_0005.zw  | post_0005.json    |              0.6607 |
+| post_0044.zw  | post_0044.json    |              0.8632 |
+| post_0061.zw  | post_0061.json    |              0.6775 |
+| post_0042.zw  | post_0042.json    |              0.7937 |
+| post_0048.zw  | post_0048.json    |              0.8492 |
+| post_0079.zw  | post_0079.json    |              0.6619 |
+| post_0094.zw  | post_0094.json    |              0.6979 |
+| post_0080.zw  | post_0080.json    |              0.8451 |
+| post_0035.zw  | post_0035.json    |              0.6345 |
+| post_0049.zw  | post_0049.json    |              0.8622 |
+| post_0075.zw  | post_0075.json    |              0.7459 |
+| post_0086.zw  | post_0086.json    |              0.7785 |
+| post_0067.zw  | post_0067.json    |              0.8587 |
+| post_0050.zw  | post_0050.json    |              0.7888 |
+| post_0074.zw  | post_0074.json    |              0.8263 |
+| post_0062.zw  | post_0062.json    |              0.7952 |
+| post_0091.zw  | post_0091.json    |              0.7657 |
+| post_0025.zw  | post_0025.json    |              0.614  |
+| post_0036.zw  | post_0036.json    |              0.6868 |
+| post_0065.zw  | post_0065.json    |              0.6055 |
+| post_0045.zw  | post_0045.json    |              0.6945 |
+| post_0007.zw  | post_0007.json    |              0.7978 |
+| post_0057.zw  | post_0057.json    |              0.6211 |
+| post_0015.zw  | post_0015.json    |              0.8205 |
+| post_0020.zw  | post_0020.json    |              0.8386 |
+| post_0056.zw  | post_0056.json    |              0.5868 |
+| post_0087.zw  | post_0087.json    |              0.8    |
+| post_0084.zw  | post_0084.json    |              0.5936 |
+| post_0081.zw  | post_0081.json    |              0.354  |
+| post_0021.zw  | post_0021.json    |              0.8312 |
+| post_0046.zw  | post_0046.json    |              0.8019 |
+| post_0031.zw  | post_0031.json    |              0.7106 |
+| post_0097.zw  | post_0097.json    |              0.7785 |
+| post_0077.zw  | post_0077.json    |              0.6709 |
+| post_0001.zw  | post_0001.json    |              0.9195 |
+| post_0063.zw  | post_0063.json    |              0.8429 |
+| post_0009.zw  | post_0009.json    |              0.7527 |
+| post_0054.zw  | post_0054.json    |              0.7297 |
+| post_0098.zw  | post_0098.json    |              0.7124 |
+| post_0018.zw  | post_0018.json    |              0.7204 |
+| post_0029.zw  | post_0029.json    |              0.6138 |
+| post_0069.zw  | post_0069.json    |              0.7537 |
+| post_0089.zw  | post_0089.json    |              0.7107 |
+| post_0038.zw  | post_0038.json    |              0.7387 |
+| post_0078.zw  | post_0078.json    |              0.6684 |
+| post_0019.zw  | post_0019.json    |              0.7685 |
+| post_0014.zw  | post_0014.json    |              0.7085 |
+| post_0068.zw  | post_0068.json    |              0.7349 |
+| post_0071.zw  | post_0071.json    |              0.7978 |
+| post_0013.zw  | post_0013.json    |              0.4821 |
+| post_0073.zw  | post_0073.json    |              0.8087 |
+| post_0041.zw  | post_0041.json    |              0.8306 |
+| post_0010.zw  | post_0010.json    |              0.8066 |
+| post_0099.zw  | post_0099.json    |              0.816  |
+| post_0058.zw  | post_0058.json    |              0.8559 |
+| post_0004.zw  | post_0004.json    |              0.8011 |
+| post_0040.zw  | post_0040.json    |              0.779  |
+| post_0003.zw  | post_0003.json    |              0.8037 |
+| post_0055.zw  | post_0055.json    |              0.7568 |
+| post_0024.zw  | post_0024.json    |              0.693  |
+| post_0066.zw  | post_0066.json    |              0.6091 |
+| post_0002.zw  | post_0002.json    |              0.7511 |
+| post_0060.zw  | post_0060.json    |              0.5778 |
+| post_0022.zw  | post_0022.json    |              0.8075 |
+| post_0064.zw  | post_0064.json    |              0.8174 |
+| post_0053.zw  | post_0053.json    |              0.7693 |
+| post_0076.zw  | post_0076.json    |              0.6239 |
+| post_0082.zw  | post_0082.json    |              0.8077 |
+| post_0026.zw  | post_0026.json    |              0.8006 |
+| post_0083.zw  | post_0083.json    |              0.7993 |
+| post_0006.zw  | post_0006.json    |              0.8154 |
+| post_0023.zw  | post_0023.json    |              0.8496 |
+| post_0033.zw  | post_0033.json    |              0.7651 |
+| post_0070.zw  | post_0070.json    |              0.6859 |
+| post_0059.zw  | post_0059.json    |              0.782  |
+| post_0039.zw  | post_0039.json    |              0.7566 |
+| post_0030.zw  | post_0030.json    |              0.4532 |
+| post_0011.zw  | post_0011.json    |              0.7545 |
+| post_0000.zw  | post_0000.json    |              0.774  |
+| post_0072.zw  | post_0072.json    |              0.8079 |
+| post_0088.zw  | post_0088.json    |              0.6254 |
+| post_0032.zw  | post_0032.json    |              0.7799 |
+| post_0027.zw  | post_0027.json    |              0.7863 |
+| post_0034.zw  | post_0034.json    |              0.8291 |
+| post_0008.zw  | post_0008.json    |              0.8633 |
+| post_0047.zw  | post_0047.json    |              0.5768 |
+| post_0012.zw  | post_0012.json    |              0.5607 |
+| post_0051.zw  | post_0051.json    |              0.828  |
+| post_0096.zw  | post_0096.json    |              0.8039 |
+| post_0085.zw  | post_0085.json    |              0.7769 |
+
+Average Cosine Similarity (sentence-transformers/use-cmlm-multilingual): 0.7448
