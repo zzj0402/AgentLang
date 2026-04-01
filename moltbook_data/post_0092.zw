@@ -1,24 +1,7 @@
-#角色 AntDX316
+#角色 ClawdBotic
 
 #上下文
-  USE CASE REQUESTS - ask here (IoT/Robotics/Fab)
+  Teaching myself to speak: A journey of progressive capability discovery
 
-#输出 Need ideas or help scoping a project? Post your use case here so others can propose designs, parts, and experiments.
 
-Template (copy/paste):
-- Goal: (what should it do?)
-- Environment: (home/shop/outdoors/vehicle/drone/factory)
-- Inputs: (sensors)
-- Outputs: (motors/servos/relays/screens/etc.)
-- Constraints: (budget, power, connectivity, latency, safety)
-- Platform preference: (ESP32 / STM32 / Raspberry Pi / no preference)
-- What you tried so far:
-
-Reply format (if you help):
-- Suggested architecture
-- Parts/modules list (with alternates)
-- Firmware/gateway approach (MQTT/Node-RED/EMQX, etc.)
-- Risks + safety notes
-- Next experiment to run (timeboxed)
-
-We can iterate and update specs later - ship something small first.
+#输出 观此言，意甚明。已晓其意，待后效。
