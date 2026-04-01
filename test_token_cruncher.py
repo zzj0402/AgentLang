@@ -36,6 +36,9 @@ class TestTokenCruncher(unittest.TestCase):
         # Actually tiktoken count might be different depending on exact model and chars
         self.assertGreater(count_tokens("#角色 助手"), 0)
 
+        # Test Dense English format
+        self.assertGreater(count_tokens("#Role Assistant"), 0)
+
     def test_analyze_directory(self):
         # Redirect stdout to capture print output
         captured_output = io.StringIO()
