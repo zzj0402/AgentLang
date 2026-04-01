@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-**智文 AgentLang** is a high-density, human-machine bilingual semantic protocol for AI Agents. It fuses the conciseness of classical Chinese (文言文) with an empathic reasoning engine (观→感→需→请), achieving 50–80% token reduction while maintaining full human readability, auditability, and emotional intelligence.
+**智文 AgentLang** is a high-density, empathic, and human-machine bilingual semantic protocol for AI Agents. It fuses the conciseness of classical Chinese (文言文) with an empathic reasoning engine (观→感→需→请), achieving 50–80% token reduction while maintaining full human readability, auditability, and emotional intelligence.
 
 - **Repository**: `AgentLang`
 - **License**: Apache 2.0

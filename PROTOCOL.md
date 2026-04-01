@@ -2,7 +2,7 @@
 
 **Version**: 0.1.0
 
-> A high-density, human-machine bilingual semantic protocol for AI Agents.
+> A high-density, empathic, and human-machine bilingual semantic protocol for AI Agents.
 > Classical Chinese conciseness fused with an empathic reasoning engine (观→感→需→请).
 
 ## Notation
