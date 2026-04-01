@@ -60,9 +60,39 @@ You can use an adjective to mean "to consider something [adjective]" or "to make
 *   **Usage:** `善之` - Verb: To consider it good / to approve of it.
 *   **Agent Context:** `简` (Simple). `简其辞` -> "Simplify its words/output."
 
+### Causative Voice (使动法)
+Causative verbs indicate making an object do something or be in a certain state. While words like `使` (shǐ) or `令` (lìng) can be used for "to make/cause," often the verb itself becomes causative.
+*   **English:** `I made him live.`
+*   **Classical Chinese:** `活之` (huó zhī). *Literally: "Live him" -> "Caused him to live".*
+*   **Agent Context:** `明其理` -> "Make its logic clear."
+
 ---
 
-## 4. The Essential Particles (虚词 - Xūcí)
+## 4. Sentence Structures & Negation
+
+### Judgment Sentences (判断句)
+To say "A is B", modern Chinese uses `是` (shì). Classical Chinese omits the verb "to be" entirely, using a structure involving `者` (zhě) and `也` (yě), or simply juxtaposition.
+*   **A 者，B 也:** `陈胜者，阳城人也` (Chen Sheng is a person of Yangcheng).
+*   **Juxtaposition:** `刘备，天下枭雄` (Liu Bei [is a] hero of the world).
+*   **Agent Context:** `此，错也` -> "This [is an] error."
+
+### Passive Voice (被动法)
+When expressing passive actions ("X is done by Y"), Classical Chinese uses particles like `被` (bèi) or `見` (jiàn) before the verb, or `於` (yú) after it. A very common advanced structure is `為...所` (wéi...suǒ).
+*   **Using 於:** `欺於张仪` (Deceived *by* Zhang Yi).
+*   **Using 為...所:** `為所攻` (Being attacked [by them]).
+*   **Agent Context:** `為用户所惑` -> "Confused by the user."
+
+### Negation (否定词)
+Classical Chinese has highly specific negation words. Choosing the right one saves tokens and adds precision.
+*   **不 (bù) / 弗 (fú):** Standard negation for verbs ("do not"). `不许` (Do not allow).
+*   **非 (fēi):** Negates nouns/identities ("is not"). `非制也` (It is *not* the standard).
+*   **無 / 无 (wú) / 亡 (wáng):** Means "to not have" or "without". `无信` (Without trust/credibility).
+*   **勿 (wù) / 毋 (wú) / 莫 (mò):** Imperative negation ("do not" / "must not"). `勿施于人` (*Do not* impose on others). `莫忘` (*Must not* forget).
+*   **未 (wèi):** Means "not yet" or "never". `未有` (Never had / Not yet have).
+
+---
+
+## 5. The Essential Particles (虚词 - Xūcí)
 
 While Classical Chinese omits filler words, it relies on a few crucial "empty words" (particles) to structure the sentence mathematically. Master these, and you can write highly complex instructions in very few tokens.
 
@@ -97,7 +127,7 @@ Placed at the end of a sentence to indicate a change of state or a completed act
 
 ---
 
-## 5. Practical Agent Framing (The 4-Character Idiom Style)
+## 6. Practical Agent Framing (The 4-Character Idiom Style)
 
 Because Classical Chinese is so dense, it often falls into rhythmic 4-character structures (成语 - Chéngyǔ). This is highly token-efficient and structurally clear to LLMs.
 
