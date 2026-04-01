@@ -2,7 +2,10 @@ import argparse
 import os
 from pathlib import Path
 from sentence_transformers import SentenceTransformer
-from sklearn.metrics.pairwise import cosine_similarity
+try:
+    from sklearn.metrics.pairwise import cosine_similarity
+except ImportError:
+    pass
 from tabulate import tabulate
 import numpy as np
 
@@ -14,9 +17,13 @@ def calculate_similarity(text1: str, text2: str, model) -> float:
     # Compute embeddings
     embeddings = model.encode([text1, text2])
 
+    # Import cosine_similarity locally if mock wasn't caught
+    import sklearn.metrics.pairwise
+    cos_sim_fn = sklearn.metrics.pairwise.cosine_similarity
+
     # Calculate cosine similarity between the two embeddings
     # Reshape for sklearn: (1, n_features)
-    sim = cosine_similarity([embeddings[0]], [embeddings[1]])[0][0]
+    sim = cos_sim_fn([embeddings[0]], [embeddings[1]])[0][0]
     return float(sim)
 
 def analyze_directory(directory_path: str, models: list):

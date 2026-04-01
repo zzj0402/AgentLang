@@ -1,7 +1,7 @@
 import unittest
-import os
 import tempfile
 import shutil
+import json
 from pathlib import Path
 from embedding_benchmark import calculate_similarity, analyze_directory
 import io
@@ -12,7 +12,9 @@ class MockModel:
     def encode(self, texts):
         if len(texts) == 2 and texts[0] == texts[1]:
             return [[1.0, 0.0], [1.0, 0.0]]
-        return [[1.0, 0.0], [0.0, 1.0]]
+        if len(texts) == 2 and texts[0] != texts[1]:
+            return [[1.0, 0.0], [0.0, 1.0]]
+        return [[1.0, 0.0], [1.0, 0.0]]
 
 class TestEmbeddingBenchmark(unittest.TestCase):
     def setUp(self):
